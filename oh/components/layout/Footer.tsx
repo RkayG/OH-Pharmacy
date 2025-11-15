@@ -3,12 +3,12 @@ import { FaPhone, FaMapMarkerAlt, FaFacebook, FaInstagram, FaLinkedin } from 're
 
 export default function Footer() {
   return (
-    <footer className="bg-text-dark text-white mt-16">
+    <footer className="bg-text-dark text-white mt-16 pl-32 pt-32">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About */}
           <div>
-            <h3 className="text-xl font-display font-bold mb-4">OH Pharmacy</h3>
+            <h3 className="text-xl font-display font-bold mb-12">OH Pharmacy</h3>
             <p className="text-gray-300 mb-4">
               Your trusted local pharmacy offering a wide range of private health services and expert care.
             </p>
