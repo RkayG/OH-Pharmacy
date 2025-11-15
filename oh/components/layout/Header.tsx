@@ -2,14 +2,15 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { PharmacyNavigation } from '@/components/ui/pharmacy-navigation';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <nav className="bg-background-light fixed w-full z-20 top-0 start-0 border-b border-border">
-      <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+    <nav className="bg-background-light fixed w-full z-20 top-0 start-0 border-b border-border relative">
+      <div className="flex items-center justify-between py-8 mx-auto max-w-screen-xl p-4">
+        {/* Logo - Left */}
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <div className="text-primary">
             <svg className="w-7 h-7" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
@@ -19,125 +20,90 @@ export default function Header() {
           <span className="self-center text-xl font-semibold whitespace-nowrap text-text-light">OH Pharmacy</span>
         </Link>
 
-        <button
-          data-collapse-toggle="mega-menu-full"
-          type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-text-light rounded-lg md:hidden hover:bg-secondary/10 hover:text-text-light focus:outline-none focus:ring-2 focus:ring-border"
-          aria-controls="mega-menu-full"
-          aria-expanded={mobileMenuOpen}
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          <span className="sr-only">Open main menu</span>
-          <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" strokeLinecap="round" strokeWidth="2" d="M5 7h14M5 12h14M5 17h14"/>
-          </svg>
-        </button>
-
-        <div id="mega-menu-full" className={`items-center justify-between ${mobileMenuOpen ? 'flex' : 'hidden'} w-full md:flex md:w-auto md:order-1`}>
-          <ul className="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
-            <li>
-              <Link href="/" className="block py-2 px-3 text-text-light hover:text-primary border-b border-border hover:bg-secondary/10 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0" aria-current="page">
-                Home
-              </Link>
-            </li>
-            <li>
-              <button
-                id="mega-menu-full-dropdown-button"
-                data-collapse-toggle="mega-menu-full-dropdown"
-                className="flex items-center justify-between w-full py-2 px-3 font-medium text-text-light border-b border-border md:w-auto hover:bg-secondary/10 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0"
-                onClick={() => setDropdownOpen(!dropdownOpen)}
-              >
-                Services
-                <svg className="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 9-7 7-7-7"/>
-                </svg>
-              </button>
-            </li>
-            <li>
-              <Link href="/Travel-Clinic/travel-vaccination" className="block py-2 px-3 text-text-light hover:text-primary border-b border-border hover:bg-secondary/10 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0">
-                Travel Clinic
-              </Link>
-            </li>
-            <li>
-              <Link href="/Services/services" className="block py-2 px-3 text-text-light hover:text-primary border-b border-border hover:bg-secondary/10 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link href="/Services/contact-us" className="block py-2 px-3 text-text-light hover:text-primary border-b border-border hover:bg-secondary/10 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0">
-                Contact
-              </Link>
-            </li>
-          </ul>
+        {/* Desktop Navigation - Center */}
+        <div className="hidden md:flex">
+          <PharmacyNavigation />
         </div>
-      </div>
 
-      {dropdownOpen && (
-        <div id="mega-menu-full-dropdown" className="mt-1 bg-background-light border-border shadow-sm border-y">
-          <div className="grid max-w-screen-xl px-4 py-5 mx-auto text-text-light sm:grid-cols-2 md:grid-cols-3 md:px-6">
-            <ul aria-labelledby="mega-menu-full-dropdown-button">
-              <li>
-                <Link href="/Services/vitamin-b12" className="block p-3 rounded-lg hover:bg-secondary/10">
-                  <div className="font-semibold">Vitamin B12 Injections</div>
-                  <span className="text-sm text-text-muted-light">Essential vitamin injections for energy and wellness.</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/Services/earwax-removal-service" className="block p-3 rounded-lg hover:bg-secondary/10">
-                  <div className="font-semibold">Earwax Removal</div>
-                  <span className="text-sm text-text-muted-light">Safe and professional earwax removal service.</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/Services/private-prescriptions" className="block p-3 rounded-lg hover:bg-secondary/10">
-                  <div className="font-semibold">Private Prescriptions</div>
-                  <span className="text-sm text-text-muted-light">Convenient private prescription services.</span>
-                </Link>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <Link href="/Travel-Clinic/travel-vaccination" className="block p-3 rounded-lg hover:bg-secondary/10">
-                  <div className="font-semibold">Travel Vaccinations</div>
-                  <span className="text-sm text-text-muted-light">Complete travel health protection.</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/Services/minor-ailement-clinic" className="block p-3 rounded-lg hover:bg-secondary/10">
-                  <div className="font-semibold">Minor Ailments Clinic</div>
-                  <span className="text-sm text-text-muted-light">Quick consultations for common health issues.</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/weight-loss-service" className="block p-3 rounded-lg hover:bg-secondary/10">
-                  <div className="font-semibold">Weight Loss Services</div>
-                  <span className="text-sm text-text-muted-light">Professional weight management support.</span>
-                </Link>
-              </li>
-            </ul>
-            <ul className="hidden md:block">
-              <li>
-                <Link href="/eye-care" className="block p-3 rounded-lg hover:bg-secondary/10">
-                  <div className="font-semibold">Eye Care Services</div>
-                  <span className="text-sm text-text-muted-light">Comprehensive eye care and optical services.</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/Services/erectile-dysfunction" className="block p-3 rounded-lg hover:bg-secondary/10">
-                  <div className="font-semibold">Erectile Dysfunction</div>
-                  <span className="text-sm text-text-muted-light">Discreet consultations and treatments.</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/Services/hair-loss" className="block p-3 rounded-lg hover:bg-secondary/10">
-                  <div className="font-semibold">Hair Loss Treatments</div>
-                  <span className="text-sm text-text-muted-light">Effective solutions for hair restoration.</span>
-                </Link>
-              </li>
-            </ul>
+        {/* Right Side - Book Appointment + Mobile Menu */}
+        <div className="flex items-center space-x-4">
+          {/* Book Appointment Button - Desktop */}
+          <div className="hidden md:block">
+            <Link href="/book-services" className="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-colors">
+              Book Appointment
+            </Link>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            data-collapse-toggle="mega-menu-full"
+            type="button"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-text-light rounded-lg md:hidden hover:bg-secondary/10 hover:text-text-light focus:outline-none focus:ring-2 focus:ring-border"
+            aria-controls="mega-menu-full"
+            aria-expanded={mobileMenuOpen}
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            <span className="sr-only">Open main menu</span>
+            <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" strokeLinecap="round" strokeWidth="2" d="M5 7h14M5 12h14M5 17h14"/>
+            </svg>
+          </button>
         </div>
-      )}
+
+        {/* Mobile Navigation */}
+        {mobileMenuOpen && (
+          <div className="md:hidden border-t border-border bg-background-light">
+            <div className="px-4 py-4">
+              <nav className="flex flex-col gap-4">
+                <Link
+                  href="/"
+                  className="block py-2 px-3 text-text-light hover:text-primary border-b border-border hover:bg-secondary/10"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Home
+                </Link>
+                <Link
+                  href="/Services/services"
+                  className="block py-2 px-3 text-text-light hover:text-primary border-b border-border hover:bg-secondary/10"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Services
+                </Link>
+                <Link
+                  href="/Travel-Clinic/travel-vaccination"
+                  className="block py-2 px-3 text-text-light hover:text-primary border-b border-border hover:bg-secondary/10"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Travel Clinic
+                </Link>
+                <Link
+                  href="/Services/services"
+                  className="block py-2 px-3 text-text-light hover:text-primary border-b border-border hover:bg-secondary/10"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  About
+                </Link>
+                <Link
+                  href="/Services/contact-us"
+                  className="block py-2 px-3 text-text-light hover:text-primary border-b border-border hover:bg-secondary/10"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Contact
+                </Link>
+
+                <Link
+                  href="/book-services"
+                  className="block mt-4 px-6 py-3 bg-primary text-white rounded-lg font-medium text-center hover:bg-primary/90 transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Book Appointment
+                </Link>
+              </nav>
+            </div>
+          </div>
+        )}
+
+      </div>
     </nav>
   );
 }

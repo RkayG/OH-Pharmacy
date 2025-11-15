@@ -74,7 +74,7 @@ const Carousel: React.FC<PropType> = (props) => {
 
           {slides.map((slideContent, index) => (
 
-            <div className="flex-[0_0_70%]  pl-3 transform-gpu" key={index}>
+            <div className="flex-[0_0_95%] pl-3 transform-gpu" key={index}>
 
               {slideContent}
 

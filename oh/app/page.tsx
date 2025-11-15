@@ -11,69 +11,69 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="flex justify-center items-center w-full py-10 md:py-20">
-        <div className="w-full border border-red-500 max-w-6xl px-4 sm:px-6 lg:px-8">
+      <section className="flex justify-center items-center w-full py-20 md:py-32 lg:py-40">
+        <div className="w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8">
           <Carousel
             slides={[
               <div
                 key="1"
-                className="relative min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-start justify-end p-6 md:p-12 flex"
+                className="relative min-h-[90vh] flex-col gap-8 bg-cover bg-center bg-no-repeat rounded-xl items-start justify-end p-8 md:p-16 lg:p-20 flex"
                 style={{
-                  backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=1920&q=80")'
+                  backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuB_csFz9j5Dee86UdXPpn_9P6Al3rLszCLqAXcqCx0tX_RoumFdDHumzNBSb5UqWEoK-rO7UwTWf1t1-K5caquHHASVqhnpJhsFRuykQ4h4-k1NIYqWNpSpFHOHz2Fgp6WEmeh7X3TbJ6BkXBhOa0tQjyhj7joChIOF6Lqe1AiktM1r0fDVgHj2mbIdp8L9QEgFWKV0jWgxuUZYKigD8h7vOYmA2wDQg19JT6ffOpipRVU1TZWm9XBZy9WTc7NAQNum1eZiY0e5gu6b")'
                 }}
               >
-                <div className="flex flex-col gap-2 text-left max-w-2xl">
-                  <h1 className="text-white text-4xl font-black leading-tight tracking-tighter md:text-6xl">
+                <div className="flex flex-col gap-4 text-left max-w-4xl">
+                  <h1 className="text-white text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tighter">
                     Your Health, Our Priority.
                   </h1>
-                  <h2 className="text-gray-200 text-base font-normal leading-normal md:text-lg">
+                  <h2 className="text-gray-200 text-xl md:text-2xl lg:text-3xl font-normal leading-normal">
                     Private Health Services & Travel Vaccinations in London.
                   </h2>
                 </div>
                 <Link href="/book-services">
-                  <Button size="lg" className="bg-primary hover:bg-primary/90">
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg md:text-xl px-8 py-4 md:px-12 md:py-6">
                     Book an Appointment
                   </Button>
                 </Link>
               </div>,
               <div
                 key="2"
-                className="relative min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-start justify-end p-6 md:p-12 flex"
+                className="relative min-h-[90vh] flex-col gap-8 bg-cover bg-center bg-no-repeat rounded-xl items-start justify-end p-8 md:p-16 lg:p-20 flex"
                 style={{
                   backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1920&q=80")'
                 }}
               >
-                <div className="flex flex-col gap-2 text-left max-w-2xl">
-                  <h1 className="text-white text-4xl font-black leading-tight tracking-tighter md:text-6xl">
+                <div className="flex flex-col gap-4 text-left max-w-4xl">
+                  <h1 className="text-white text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tighter">
                     Expert Care You Can Trust
                   </h1>
-                  <h2 className="text-gray-200 text-base font-normal leading-normal md:text-lg">
+                  <h2 className="text-gray-200 text-xl md:text-2xl lg:text-3xl font-normal leading-normal">
                     Professional pharmacists providing personalized healthcare solutions.
                   </h2>
                 </div>
                 <Link href="/Services/services">
-                  <Button size="lg" className="bg-primary hover:bg-primary/90">
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg md:text-xl px-8 py-4 md:px-12 md:py-6">
                     Explore Services
                   </Button>
                 </Link>
               </div>,
               <div
                 key="3"
-                className="relative min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-start justify-end p-6 md:p-12 flex"
+                className="relative min-h-[90vh] flex-col gap-8 bg-cover bg-center bg-no-repeat rounded-xl items-start justify-end p-8 md:p-16 lg:p-20 flex"
                 style={{
                   backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=1920&q=80")'
                 }}
               >
-                <div className="flex flex-col gap-2 text-left max-w-2xl">
-                  <h1 className="text-white text-4xl font-black leading-tight tracking-tighter md:text-6xl">
+                <div className="flex flex-col gap-4 text-left max-w-4xl">
+                  <h1 className="text-white text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tighter">
                     Travel Health Experts
                   </h1>
-                  <h2 className="text-gray-200 text-base font-normal leading-normal md:text-lg">
+                  <h2 className="text-gray-200 text-xl md:text-2xl lg:text-3xl font-normal leading-normal">
                     Comprehensive travel vaccinations and health advice for your adventures.
                   </h2>
                 </div>
                 <Link href="/Travel-Clinic/travel-vaccination">
-                  <Button size="lg" className="bg-primary hover:bg-primary/90">
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg md:text-xl px-8 py-4 md:px-12 md:py-6">
                     Plan Your Travel
                   </Button>
                 </Link>
