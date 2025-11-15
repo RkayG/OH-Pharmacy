@@ -1,0 +1,72 @@
+import { ReactNode } from 'react';
+import Button from './Button';
+import { cn } from '@/lib/utils';
+
+interface HeroProps {
+  title: string;
+  subtitle?: string;
+  description?: string;
+  image?: string;
+  ctaText?: string;
+  ctaHref?: string;
+  className?: string;
+  children?: ReactNode;
+}
+
+export default function Hero({
+  title,
+  subtitle,
+  description,
+  image,
+  ctaText = 'Book Now',
+  ctaHref = '/book-services',
+  className,
+  children,
+}: HeroProps) {
+  return (
+    <section
+      className={cn(
+        'relative py-20 md:py-32 overflow-hidden',
+        image && 'bg-cover bg-center bg-no-repeat',
+        className
+      )}
+      style={image ? { backgroundImage: `url(${image})` } : undefined}
+    >
+      {/* Overlay */}
+      {image && (
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary-light/80" />
+      )}
+      {!image && (
+        <div className="absolute inset-0 bg-gradient-primary" />
+      )}
+      
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-4">
+        <div className="max-w-3xl">
+          {subtitle && (
+            <p className="text-white/90 text-lg md:text-xl mb-4 font-medium">
+              {subtitle}
+            </p>
+          )}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-tight">
+            {title}
+          </h1>
+          {description && (
+            <p className="text-white/90 text-lg md:text-xl mb-8 leading-relaxed">
+              {description}
+            </p>
+          )}
+          {children || (
+            <Button href={ctaHref} variant="secondary" size="lg">
+              {ctaText}
+            </Button>
+          )}
+        </div>
+      </div>
+      
+      {/* Decorative elements */}
+      <div className="absolute bottom-0 left-0 right-0 h-20 bg-white-off" style={{ clipPath: 'polygon(0 50%, 100% 0%, 100% 100%, 0% 100%)' }} />
+    </section>
+  );
+}
+
