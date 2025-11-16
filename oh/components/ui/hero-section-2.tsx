@@ -44,7 +44,6 @@ interface HeroSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   };
   backgroundImage: string;
   contactInfo: {
-    website: string;
     phone: string;
     address: string;
   };
@@ -56,13 +55,13 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
       <section
         ref={ref}
         className={cn(
-          "relative flex w-full flex-col overflow-hidden bg-background text-foreground md:flex-row",
+          "relative flex w-full flex-col overflow-hidden  bg-[#F4F7F6] dark:bg-[#182430]text-foreground md:flex-row",
           className
         )}
         {...props}
       >
         {/* Left Side: Content */}
-        <div className="flex w-full flex-col justify-between p-8 md:w-1/2 md:p-12 lg:w-3/5 lg:p-16">
+        <div className="flex w-full flex-col justify-between p-8 md:w-1/2 md:p-8 lg:w-3/5 lg:p-20 lg:pl-38">
             {/* Top Section: Logo & Main Content */}
             <div>
                 <header className="mb-12">
@@ -91,7 +90,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
                     </p>
                     <Link 
                       href={callToAction.href} 
-                      className="text-lg font-bold tracking-widest text-primary transition-colors hover:text-primary/80"
+                      className="text-lg font-bold bg-primary text-primary-foreground hover:text-white hover:bg-primary/90  rounded-full px-6 py-4  border border-white tracking-wide text-primary transition-colors hover:text-primary/80"
                     >
                         {callToAction.text}
                     </Link>
@@ -101,10 +100,6 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
             {/* Bottom Section: Footer Info */}
             <footer className="mt-12 w-full">
                 <div className="grid grid-cols-1 gap-6 text-xs text-muted-foreground sm:grid-cols-3">
-                    <div className="flex items-center">
-                        <InfoIcon type="website" />
-                        <span>{contactInfo.website}</span>
-                    </div>
                     <div className="flex items-center">
                         <InfoIcon type="phone" />
                         <span>{contactInfo.phone}</span>
