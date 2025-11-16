@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <nav className="bg-background-light fixed w-full z-20 top-0 start-0 border-b border-border relative">
-      <div className="flex items-center justify-between py-8 mx-auto lg:px-20 px-4 p-4">
+      <div className="flex items-center justify-between py-8 mx-auto lg:px-12 px-4 p-4">
         {/* Logo - Left */}
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <div className="text-primary">
@@ -21,15 +21,15 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation - Center */}
-        <div className="hidden md:flex">
+        <div className="hidden lg:flex">
           <PharmacyNavigation />
         </div>
 
         {/* Right Side - Book Appointment + Mobile Menu */}
         <div className="flex items-center space-x-4">
           {/* Book Appointment Button - Desktop */}
-          <div className="hidden md:block">
-            <Link href="/book-services" className="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white h-12 px-6 py-4 bg-green-600 text-white text-sm font-bold hover:bg-primary/90 transition-colors">
+          <div className="hidden lg:block">
+            <Link href="/book-services" className="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white h-12 px-6 py-4 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-colors">
               Book Appointment
             </Link>
           </div>

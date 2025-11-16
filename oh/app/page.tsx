@@ -26,7 +26,6 @@ export default function Home() {
         }}
         backgroundImage="https://lh3.googleusercontent.com/aida-public/AB6AXuACJT9xEVblSG9BgdONhzauh1Pgqs2YiQdALqxWci0h6zigwK-v1_UZdkYnTWpdD3y9Jzw6TaFya9Mrwxhc6wgBMyl64LPPDaqZrHxOrxy-qf7c_DION9I6IX8ug_-i7ke6U19FYMIr2X1GtBnholl6tVp3OyBSwE1r3yRUN4kZj1pzOpGl6HI5Y1XIrc32FXTTwDx_DcKCV7OgoUOipuYilC1j11McCe51YPJqfo65KDZvQRBA1BaHRt44WOyFcP7w-nuftE20Vlev"
         contactInfo={{
-          website: "ohpharmacy.co.uk",
           phone: "0333 006 5650",
           address: "River House, 1 Maidstone Road, Sidcup, DA14 5RH",
         }}
@@ -80,9 +79,9 @@ export default function Home() {
               <h2 className="text-[#111418] dark:text-[#F4F7F6] text-3xl font-bold tracking-tight">Committed to Your Wellbeing</h2>
               <p className="text-[#617589] dark:text-[#a0aec0]  text-base leading-relaxed">At OH Pharmacy, our mission is to provide exceptional, patient-centered care. We believe in building lasting relationships within our community, offering not just treatments but also trusted advice and support for your health journey. Our dedicated team is here to ensure you receive the professional and compassionate service you deserve.</p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/Services/services">
+                <Link href="/Services">
                   <button
-                   className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white/20 h-12 px-5 bg-green-600 text-white text-base font-bold hover:bg-[#005A5B]/90 transition-colors">
+                   className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white/20 h-12 px-5 bg-primary text-primary-foreground hover:text-white hover:bg-primary/90  rounded-full px-6 py-4  border border-white tracking-wide text-primary transition-colors hover:text-primary/80">
                     <span className="truncate">Browse Services</span>
                   </button>
                 </Link>
@@ -161,7 +160,7 @@ export default function Home() {
                 </div>
                 <div>
                   <button
-                    className="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white/20 h-12 px-5 bg-green-600 text-white text-base font-bold hover:bg-[#005A5B]/90 transition-colors"
+                    className="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white/20 h-12 px-5 bg-primary text-white text-base font-bold hover:bg-[#005A5B]/90 transition-colors"
                     type="submit"
                   >
                     <span className="truncate">Send Message</span>
