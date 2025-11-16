@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Service } from '@/lib/services';
-import Button from '@/components/ui/Button';
+import { Button } from '../../components/ui/Button';
 import Breadcrumb from '@/components/ui/Breadcrumb';
 import Hero from '@/components/ui/Hero';
 import { FaCheckCircle } from 'react-icons/fa';

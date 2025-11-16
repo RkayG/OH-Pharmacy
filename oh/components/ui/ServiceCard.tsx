@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Service } from '@/lib/services';
-import Button from './Button';
+import { Button } from '../../components/ui/Button';
 import Card from './Card';
 import { FaArrowRight } from 'react-icons/fa';
 

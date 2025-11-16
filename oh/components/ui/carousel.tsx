@@ -12,7 +12,7 @@ import Autoplay from "embla-carousel-autoplay";
 
 import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 
-import Button from "@/components/ui/Button";
+import { Button } from "../../components/ui/Button";
 
 
 
