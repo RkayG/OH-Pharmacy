@@ -77,23 +77,8 @@ export function PharmacyNavigation() {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Services</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <Link
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/Services/services"
-                  >
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      All Services
-                    </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
-                      Comprehensive healthcare services tailored to your needs.
-                    </p>
-                  </Link>
-                </NavigationMenuLink>
-              </li>
-              {services.slice(0, 6).map((service) => (
+            <ul className="grid gap-6 p-6 md:w-[600px] lg:w-[800px] lg:grid-cols-3">
+              {services.map((service) => (
                 <ListItem
                   key={service.title}
                   title={service.title}
@@ -137,8 +122,8 @@ function ListItem({
   return (
     <li {...props}>
       <NavigationMenuLink asChild>
-        <Link href={href}>
-          <div className="text-sm font-medium leading-none">{title}</div>
+        <Link href={href} className="block p-3 rounded-md hover:bg-accent transition-colors">
+          <div className="text-sm font-medium leading-none mb-2">{title}</div>
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
           </p>

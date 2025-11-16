@@ -93,7 +93,7 @@ export default function Header() {
 
                 <Link
                   href="/book-services"
-                  className="block mt-4 px-6 py-3 bg-primary text-white rounded-lg font-medium text-center hover:bg-primary/90 transition-colors"
+                  className="block mt-4 px-6 py-3 bg-primary text-white rounded-full border border-primary text-center hover:bg-primary/90 transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Book Appointment

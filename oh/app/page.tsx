@@ -9,30 +9,36 @@ export default function Home() {
       <section className="flex justify-center items-center w-full">
         <div className="w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-10 md:py-20">
           <div 
-            className="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-start justify-end p-6 md:p-12"
+            className="relative flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-start justify-end p-6 md:p-12 overflow-hidden"
             style={{
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuB_csFz9j5Dee86UdXPpn_9P6Al3rLszCLqAXcqCx0tX_RoumFdDHumzNBSb5UqWEoK-rO7UwTWf1t1-K5caquHHASVqhnpJhsFRuykQ4h4-k1NIYqWNpSpFHOHz2Fgp6WEmeh7X3TbJ6BkXBhOa0tQjyhj7joChIOF6Lqe1AiktM1r0fDVgHj2mbIdp8L9QEgFWKV0jWgxuUZYKigD8h7vOYmA2wDQg19JT6ffOpipRVU1TZWm9XBZy9WTc7NAQNum1eZiY0e5gu6b")`
+              backgroundImage: `url("https://lh3.googleusercontent.com/aida-public/AB6AXuACJT9xEVblSG9BgdONhzauh1Pgqs2YiQdALqxWci0h6zigwK-v1_UZdkYnTWpdD3y9Jzw6TaFya9Mrwxhc6wgBMyl64LPPDaqZrHxOrxy-qf7c_DION9I6IX8ug_-i7ke6U19FYMIr2X1GtBnholl6tVp3OyBSwE1r3yRUN4kZj1pzOpGl6HI5Y1XIrc32FXTTwDx_DcKCV7OgoUOipuYilC1j11McCe51YPJqfo65KDZvQRBA1BaHRt44WOyFcP7w-nuftE20Vlev")`
             }}
           >
-            <div className="flex flex-col gap-2 text-left max-w-2xl">
-              <h1 className="text-white text-4xl font-black leading-tight tracking-tighter md:text-6xl">
-                Your Partner in Health & Wellness.
-              </h1>
-              <h2 className="text-gray-200 text-base font-normal leading-normal md:text-lg">
-              Expert travel vaccinations, weight loss support, and wellness injections right here in Kent
-              </h2>
-            </div>
-            <div className="flex flex-row gap-2 text-left max-w-2xl">
-            <Link href="/book-services">
-              <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white/20 h-12 px-5 bg-[#005A5B] text-white text-base font-bold hover:bg-[#005A5B]/90 transition-colors">
-                <span className="truncate">Book an Appointment</span>
-              </button>
-            </Link>
-            <Link href="/Services/services">
-              <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full border border-[#005A5B] h-12 px-5 bg-white text-[#005A5B] text-base font-bold hover:bg-white/90 transition-colors">
-                <span className="truncate">View Services</span>
-              </button>
-            </Link>
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/60 rounded-xl z-0" />
+            
+            {/* Content */}
+            <div className="relative z-10 flex flex-col gap-6 w-full">
+              <div className="flex flex-col gap-2 text-left max-w-2xl">
+                <h1 className="text-white text-4xl font-black leading-tight tracking-tighter md:text-6xl drop-shadow-lg">
+                  Your Partner in Health & Wellness.
+                </h1>
+                <h2 className="text-gray-100 text-base font-normal leading-normal md:text-lg drop-shadow-md">
+                  Expert travel vaccinations, weight loss support, and wellness injections right here in Kent
+                </h2>
+              </div>
+              <div className="flex flex-row gap-2 text-left max-w-2xl">
+                <Link href="/book-services">
+                  <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white/20 h-12 px-5 bg-[#005A5B] text-white text-base font-bold hover:bg-[#005A5B]/90 transition-colors shadow-lg">
+                    <span className="truncate">Book an Appointment</span>
+                  </button>
+                </Link>
+                <Link href="/Services/services">
+                  <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white/30 h-12 px-5 bg-white/10 backdrop-blur-sm text-white text-base font-bold hover:bg-white/20 transition-colors shadow-lg">
+                    <span className="truncate">View Services</span>
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
