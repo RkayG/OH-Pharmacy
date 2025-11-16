@@ -16,10 +16,18 @@ export default function ServiceFilter({ services, showBooking = true }: ServiceF
 
   const categories: Array<{ value: Service['category'] | 'all'; label: string }> = [
     { value: 'all', label: 'All Services' },
-    { value: 'general', label: 'General Services' },
-    { value: 'travel', label: 'Travel & Vaccination' },
-    { value: 'vaccine', label: 'Vaccines' },
+    { value: 'clinical', label: 'Clinical & Health' },
+    { value: 'vaccination', label: 'Vaccinations' },
+    { value: 'travel', label: 'Travel Health' },
+    { value: 'prescribing', label: 'Prescribing & Consultations' },
+    { value: 'medication', label: 'Medication Services' },
+    { value: 'children', label: 'Children & Family' },
+    { value: 'testing', label: 'Testing & Screening' },
+    { value: 'womens-health', label: 'Women\'s Health' },
+    { value: 'lifestyle', label: 'Lifestyle & Wellness' },
     { value: 'weight-loss', label: 'Weight Loss' },
+    { value: 'certificates', label: 'Certificates & Workplace' },
+    { value: 'additional', label: 'Additional Services' },
   ];
 
   const filteredServices = useMemo(() => {

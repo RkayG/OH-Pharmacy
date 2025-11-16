@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { Service } from '@/lib/services';
 import { Button } from '../../components/ui/Button';
 import Breadcrumb from '@/components/ui/Breadcrumb';
@@ -18,15 +19,48 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
   const getBreadcrumbItems = (): Array<{ label: string; href?: string }> => {
     const items: Array<{ label: string; href?: string }> = [{ label: 'Home', href: '/' }];
     
-    if (service.category === 'general') {
-      items.push({ label: 'Services', href: '/Services' });
-    } else if (service.category === 'travel') {
-      items.push({ label: 'Travel Clinic', href: '/Travel-Clinic/travel-vaccination' });
-    } else if (service.category === 'vaccine') {
-      items.push({ label: 'Vaccines', href: '/Vaccines/travel-vaccines' });
-    } else if (service.category === 'weight-loss') {
-      items.push({ label: 'Services', href: '/Services' });
+    // Map categories to breadcrumb paths
+    const categoryMap: Record<Service['category'], { label: string; href: string }> = {
+      'clinical': { label: 'Services', href: '/Services' },
+      'vaccination': { label: 'Services', href: '/Services' },
+      'travel': { label: 'Services', href: '/Services' },
+      'prescribing': { label: 'Services', href: '/Services' },
+      'medication': { label: 'Services', href: '/Services' },
+      'children': { label: 'Services', href: '/Services' },
+      'testing': { label: 'Services', href: '/Services' },
+      'womens-health': { label: 'Services', href: '/Services' },
+      'lifestyle': { label: 'Services', href: '/Services' },
+      'weight-loss': { label: 'Services', href: '/Services' },
+      'certificates': { label: 'Services', href: '/Services' },
+      'additional': { label: 'Services', href: '/Services' },
+    };
+    
+    const categoryInfo = categoryMap[service.category];
+    if (categoryInfo) {
+      items.push(categoryInfo);
     }
+    
+    // Add category page link
+    const categorySlug = service.category === 'weight-loss' ? 'weight-loss' : service.category;
+    const categoryLabels: Record<Service['category'], string> = {
+      'clinical': 'Clinical & Health Services',
+      'vaccination': 'Vaccinations & Immunisation',
+      'travel': 'Travel Health Services',
+      'prescribing': 'Private Prescribing & Consultations',
+      'medication': 'Medication-Related Services',
+      'children': 'Children & Family Services',
+      'testing': 'Testing & Screening Services',
+      'womens-health': 'Women\'s Health Services',
+      'lifestyle': 'Lifestyle & Wellness Services',
+      'weight-loss': 'Weight Loss Services',
+      'certificates': 'Certificates & Workplace Services',
+      'additional': 'Additional Services',
+    };
+    
+    items.push({ 
+      label: categoryLabels[service.category] || 'Category', 
+      href: `/Services/category/${categorySlug}` 
+    });
     
     items.push({ label: service.title });
     return items;
@@ -86,22 +120,21 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
                   </p>
                 </div>
                 {service.bookingUrl ? (
-                  <Button
+                  <a
                     href={service.bookingUrl}
-                    external
-                    variant="primary"
-                    size="lg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 rounded-md px-8 bg-primary text-primary-foreground hover:bg-primary/90"
                   >
                     Book Online
-                  </Button>
+                  </a>
                 ) : (
-                  <Button
+                  <Link
                     href="/book-services"
-                    variant="primary"
-                    size="lg"
+                    className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 rounded-md px-8 bg-primary text-primary-foreground hover:bg-primary/90"
                   >
                     Book Appointment
-                  </Button>
+                  </Link>
                 )}
               </div>
             </div>
@@ -121,13 +154,12 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
                       <p className="text-text-light text-sm mb-4">
                         {related.description}
                       </p>
-                      <Button
+                      <Link
                         href={related.slug}
-                        variant="outline"
-                        size="sm"
+                        className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-9 rounded-md px-3 border border-input bg-background hover:bg-accent hover:text-accent-foreground"
                       >
                         Learn More
-                      </Button>
+                      </Link>
                     </div>
                   ))}
                 </div>
