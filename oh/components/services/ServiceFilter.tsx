@@ -37,13 +37,13 @@ export default function ServiceFilter({ services, showBooking = true }: ServiceF
       <div className="mb-8 space-y-4">
         {/* Search */}
         <div className="relative">
-          <FaSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-text-light" />
+          <FaSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
           <input
             type="text"
             placeholder="Search services..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+            className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-[#005A5B] focus:border-transparent"
           />
         </div>
 
@@ -55,8 +55,8 @@ export default function ServiceFilter({ services, showBooking = true }: ServiceF
               onClick={() => setSelectedCategory(category.value)}
               className={`px-4 py-2 rounded-md font-medium transition-colors ${
                 selectedCategory === category.value
-                  ? 'bg-primary text-white'
-                  : 'bg-white text-text-dark hover:bg-white-off border border-gray-300'
+                  ? 'bg-[#005A5B] text-white'
+                  : 'bg-white text-[#111418] hover:bg-gray-50 border border-gray-300'
               }`}
             >
               {category.label}
@@ -67,7 +67,7 @@ export default function ServiceFilter({ services, showBooking = true }: ServiceF
 
       {/* Results */}
       <div>
-        <p className="text-text-light mb-4">
+        <p className="text-[#617589] mb-4">
           Showing {filteredServices.length} service{filteredServices.length !== 1 ? 's' : ''}
         </p>
         <ServiceGrid services={filteredServices} showBooking={showBooking} />

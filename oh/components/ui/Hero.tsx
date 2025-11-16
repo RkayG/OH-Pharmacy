@@ -41,7 +41,7 @@ export default function Hero({
       )}
       
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4">
+      <div className="relative z-10 container mx-auto px-4 md:px-8 lg:px-12">
         <div className="max-w-3xl">
           {subtitle && (
             <p className="text-white/90 text-lg md:text-xl mb-4 font-medium">

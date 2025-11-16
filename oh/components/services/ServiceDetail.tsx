@@ -19,13 +19,13 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
     const items: Array<{ label: string; href?: string }> = [{ label: 'Home', href: '/' }];
     
     if (service.category === 'general') {
-      items.push({ label: 'Services', href: '/Services/services' });
+      items.push({ label: 'Services', href: '/Services' });
     } else if (service.category === 'travel') {
       items.push({ label: 'Travel Clinic', href: '/Travel-Clinic/travel-vaccination' });
     } else if (service.category === 'vaccine') {
       items.push({ label: 'Vaccines', href: '/Vaccines/travel-vaccines' });
     } else if (service.category === 'weight-loss') {
-      items.push({ label: 'Services', href: '/Services/services' });
+      items.push({ label: 'Services', href: '/Services' });
     }
     
     items.push({ label: service.title });

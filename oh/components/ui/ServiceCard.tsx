@@ -1,9 +1,5 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { Service } from '@/lib/services';
-import { Button } from '../../components/ui/Button';
-import Card from './Card';
-import { FaArrowRight } from 'react-icons/fa';
 
 interface ServiceCardProps {
   service: Service;
@@ -13,66 +9,60 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ service, showBooking = true, className }: ServiceCardProps) {
   return (
-    <Card hover className={className}>
-      <div className="flex flex-col h-full">
-        {/* Image */}
+    <div className={`relative flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md transition-all duration-300 hover:shadow-lg ${className || ''}`}>
+      {/* Image Section */}
+      <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-gray-200 bg-clip-border shadow-lg shadow-[#005A5B]/40">
         {service.image ? (
-          <div className="relative w-full h-48 mb-4 rounded-md overflow-hidden bg-gray-200">
-            <Image
-              src={service.image}
-              alt={service.title}
-              fill
-              className="object-cover"
-            />
-          </div>
+          <img
+            src={service.image}
+            alt={service.title}
+            className="w-full h-full object-cover"
+          />
         ) : (
-          <div className="w-full h-48 mb-4 rounded-md bg-gradient-primary flex items-center justify-center">
-            <span className="text-white text-4xl font-display font-bold">
+          <div className="w-full h-full flex items-center justify-center bg-gradient-to-r from-[#005A5B] to-[#005A5B]/80">
+            <span className="text-white text-4xl font-bold">
               {service.title.charAt(0)}
             </span>
           </div>
         )}
-        
-        {/* Content */}
-        <div className="flex-grow flex flex-col">
-          <h3 className="text-xl font-display font-semibold text-text-dark mb-2">
-            {service.title}
-          </h3>
-          <p className="text-text-light mb-4 flex-grow">
-            {service.description}
-          </p>
-          
-          {/* Price */}
-          {service.price && (
-            <p className="text-primary font-semibold mb-4">
-              From {service.price}
-            </p>
-          )}
-          
-          {/* Actions */}
-          <div className="flex flex-col sm:flex-row gap-3 mt-auto">
-            <Link
-              href={service.slug}
-              className="flex items-center gap-2 text-primary font-medium hover:underline transition-colors"
-            >
-              More Details
-              <FaArrowRight className="text-sm" />
-            </Link>
-            {showBooking && service.bookingUrl && (
-              <Button
-                href={service.bookingUrl}
-                external
-                variant="primary"
-                size="sm"
-                className="w-full sm:w-auto"
-              >
-                Book Online
-              </Button>
-            )}
-          </div>
-        </div>
       </div>
-    </Card>
+
+      {/* Content Section */}
+      <div className="p-6">
+        <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-[#111418] antialiased">
+          {service.title}
+        </h5>
+        <p className="block font-sans text-base font-light leading-relaxed text-[#617589] antialiased">
+          {service.description}
+        </p>
+        {service.price && (
+          <p className="mt-3 block font-sans text-base font-semibold text-[#005A5B]">
+            From {service.price}
+          </p>
+        )}
+      </div>
+
+      {/* Button Section */}
+      <div className="p-6 pt-0">
+        {showBooking && service.bookingUrl ? (
+          <a
+            href={service.bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full select-none rounded-lg bg-[#005A5B] py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-[#005A5B]/20 transition-all hover:shadow-lg hover:shadow-[#005A5B]/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+          >
+            Book Online
+          </a>
+        ) : (
+          <Link
+            href={service.slug}
+            className="block w-full select-none rounded-lg bg-[#005A5B] py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-[#005A5B]/20 transition-all hover:shadow-lg hover:shadow-[#005A5B]/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+          >
+            Read More
+          </Link>
+        )}
+      </div>
+    </div>
   );
 }
 

@@ -4,11 +4,11 @@ import ServiceFilter from '@/components/services/ServiceFilter';
 import { services } from '@/lib/services';
 
 export const metadata: Metadata = {
-  title: 'Our Services - OH Pharmacy',
+  title: 'All Services - OH Pharmacy',
   description: 'Find out more about our range of private services. We offer access to expert healthcare services in Sidcup.',
 };
 
-export default function ServicesPage() {
+export default function AllServicesPage() {
   return (
     <>
       <Hero

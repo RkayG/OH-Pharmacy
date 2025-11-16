@@ -48,36 +48,36 @@ export default function Home() {
       <Feature72
         heading="Featured Services"
         description="Expert medical services tailored to your needs, delivered with care and precision. Our comprehensive healthcare solutions are designed to keep you and your family healthy."
-        linkUrl="/Services/services"
+        linkUrl="/Services"
         linkText="View All Services"
         features={[
           {
-            id: "travel-vaccinations",
-            title: "Travel Vaccinations",
-            description: "Stay protected worldwide with comprehensive vaccines. Our travel clinic provides expert advice and essential vaccinations for your journey, ensuring you travel safely and confidently.",
-            image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAS6mRfRaIdP7-HEwVuSx244H3sjjWnV7ymkxvhkznxJ92og1rnjIUc0SAlUBugMhq6qTAk11tEarz2WFLR3SlytvzoTGxdhJRf2F8WITjbi_trTrMzuSeoFP9_Q-b7-S84xda1ZNAFb3piDUNkXPp0AqjV8Y0eR_0t0LTYxXIvORb72ygcoyTIkbSlRe5NNCkxYHRb_NdHe9nVMRyFAHYr2oFEi39PsnN1BomOJqHZzYNxMEnYWIGz9tAUXbTHWNjfgRRN0snj-ovp",
+            id: "weight-loss",
+            title: "Weight Loss Service",
+            description: "We offer a private weight loss service in partnership with Expert Weight Loss. Our service offers online consultations, diet and exercise advice and regular check-in appointments.",
+            image: "https://rifaraypharmacy.co.uk/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2024-12-14-at-10.36.01-AM-1-qyj3h4a2iaabn95491vhqv1wv8x5rspscb8ohkqxco.jpeg",
+            href: "/weight-loss-service"
+          },
+          {
+            id: "vitamin-b12",
+            title: "Vitamin B12",
+            description: "We offer a private Vitamin B12 injection service at our pharmacy. Please complete your order online to get the injection at the pharmacy.",
+            image: "https://rifaraypharmacy.co.uk/wp-content/uploads/elementor/thumbs/vitamin-B12-qce144eqv79v6iwx6f0p4216ezmqlm8trvy0srow2g.webp",
+            href: "/Services/vitamin-b12"
+          },
+          {
+            id: "travel-clinic",
+            title: "Travel Clinic",
+            description: "Are you travelling abroad soon? Get expert travel health advice, vaccines and antimalarials at our pharmacy.",
+            image: "https://rifaraypharmacy.co.uk/wp-content/uploads/elementor/thumbs/travel-clinic-4-qnr2retumi3bud9bi4iskah0yhexbkygyjzleklt94.jpg",
             href: "/Travel-Clinic/travel-vaccination"
           },
           {
-            id: "health-checks",
-            title: "Private Health Checks",
-            description: "Advanced screening for optimal wellness. Proactive health screening to monitor and manage your wellbeing with comprehensive private health check services.",
-            image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCmtSGLO_215TLN9x3DJRPc74L6tQnFmfzsOG6dFXPRvUZLjicde42UzgVnO7b7bVtCMG5Jtuo_p7cuFLIlGAODTOHh4u-U5u72fR-DwwzBgcQaB8yPJDXv9yhMW8poMuLQgxV1hS7H6oTL4HrDNKo1f5x26bFLZCvPn49KU75eHM_nuvAdzIVW6M_vJet8ww2QPwD9K4Hf5hvXk1qyIBp5Ewjv4HaoOrlQSPvuzQ7kVqNDuNnMwF0fIF-fukrC7uh5hkh7FBCdwEnU",
-            href: "/Services/services"
-          },
-          {
-            id: "minor-ailments",
-            title: "Minor Ailments Clinic",
-            description: "Quick and convenient consultations for common health concerns. Get expert advice and treatment for minor ailments without the need for a GP appointment.",
-            image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBKtF8edOsUvVB80dNCH6qsUHJAtSqkV5lXD4u9wSKMZjru-vjT9NbnS3sSFC0j5zf3tlB7zNkkYRrQMXC6vkFLQDOGYoNl5VJa56UIxIMSluKhx1UG9OJj3l4Exhz4VIpPX6cXBwg4FWywlFY9CRwcpBxyHEKHcILXSNki3Q-hsASeVdkzQ6h2GPWn3AwcXYYeyw-LXTkEy3J-UyJ_bz45hSI-NRd4VWii213cLdXY-ExsqtU5Rv8dN8C6uKAkZ7w8eiHqLNtSEF4D",
-            href: "/Services/minor-ailement-clinic"
-          },
-          {
-            id: "blood-tests",
-            title: "Blood Tests",
-            description: "A wide range of blood tests available with fast, accurate results. Comprehensive diagnostic testing to help monitor your health and detect potential issues early.",
-            image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAL9SiZDq9g44NWAMHeMhlgyxjJlkZbP0xPoxyWeTQn3LeeW3AbF0e5_cnSIrkb4J2NAJs46745dIm5DB_41rwGnJ8hZceg_PIw88U3AuHmPl-pAMzCd5NbxwgcHaUnGGzsOG7_BfZSM3jmeYtAQO3lslgV2UC0DhNyYPEBd-46WBYILph2aTP9mExDyPJn6pXxYkH5Hq5lC8qHcItjuFQmYsalcYCuQUcmu_q8v7rPHprrqOXBBPsZN1yM_6piEJZkxcd6g98wI0o-",
-            href: "/Services/services"
+            id: "speciality-vaccine",
+            title: "Speciality Vaccine",
+            description: "We offer private speciality vaccines at our pharmacy, including Chickenpox, Shingles and HPV vaccines. Book your appointment online.",
+            image: "https://rifaraypharmacy.co.uk/wp-content/uploads/elementor/thumbs/speciality-vaccine-1-1-qnr3drfp4oorwkskzsbfunflgb94chopd6f87fgtaw.jpg",
+            href: "/Travel-Clinic/special-vaccination"
           }
         ]}
       />
@@ -92,13 +92,13 @@ export default function Home() {
               <h2 className="text-[#111418] dark:text-[#F4F7F6] text-3xl font-bold tracking-tight">Committed to Your Wellbeing</h2>
               <p className="text-[#617589] dark:text-[#a0aec0]  text-base leading-relaxed">At OH Pharmacy, our mission is to provide exceptional, patient-centered care. We believe in building lasting relationships within our community, offering not just treatments but also trusted advice and support for your health journey. Our dedicated team is here to ensure you receive the professional and compassionate service you deserve.</p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/about">
+                <Link href="/Services/services">
                   <button
                    className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white/20 h-12 px-5 bg-green-600 text-white text-base font-bold hover:bg-[#005A5B]/90 transition-colors">
-                    <span className="truncate">Meet Our Team</span>
+                    <span className="truncate">Browse Services</span>
                   </button>
                 </Link>
-                <Link href="/contact">
+                <Link href="/Services/contact-us">
                   <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white/20 h-12 px-5 bg-[#E8A87C] text-[#005A5B] font-bold hover:bg-[#E8A87C]/90 transition-colors">
                     <span className="truncate">Contact Us Today</span>
                   </button>
