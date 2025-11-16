@@ -58,13 +58,21 @@ const categoryMap: Record<string, { label: string; description: string }> = {
 };
 
 interface CategoryPageProps {
-  params: {
+  params: Promise<{
     category: string;
-  };
+  }>;
+}
+
+export async function generateStaticParams() {
+  // Return all valid category slugs
+  return Object.keys(categoryMap).map((category) => ({
+    category: category,
+  }));
 }
 
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
-  const categoryInfo = categoryMap[params.category];
+  const { category } = await params;
+  const categoryInfo = categoryMap[category];
   
   if (!categoryInfo) {
     return {
@@ -78,9 +86,10 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   };
 }
 
-export default function CategoryPage({ params }: CategoryPageProps) {
+export default async function CategoryPage({ params }: CategoryPageProps) {
+  const { category } = await params;
   // Handle weight-loss category slug
-  const categorySlug = params.category === 'weight-loss' ? 'weight-loss' : params.category;
+  const categorySlug = category === 'weight-loss' ? 'weight-loss' : category;
   const categoryInfo = categoryMap[categorySlug];
 
   if (!categoryInfo) {

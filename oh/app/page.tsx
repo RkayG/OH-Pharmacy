@@ -1,48 +1,36 @@
 'use client';
 import Link from 'next/link';
 import { Feature72 } from '@/components/ui/feature-72';
+import { HeroSection } from '@/components/ui/hero-section-2';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-[#101922]">
       {/* Hero Section */}
-      <section className="flex justify-center bg-[#F4F7F6] dark:bg-[#182430] items-center w-full">
-        <div className="w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-10 md:py-20">
-          <div 
-            className="relative flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-start justify-end p-6 md:p-12 overflow-hidden"
-            style={{
-              backgroundImage: `url("https://lh3.googleusercontent.com/aida-public/AB6AXuACJT9xEVblSG9BgdONhzauh1Pgqs2YiQdALqxWci0h6zigwK-v1_UZdkYnTWpdD3y9Jzw6TaFya9Mrwxhc6wgBMyl64LPPDaqZrHxOrxy-qf7c_DION9I6IX8ug_-i7ke6U19FYMIr2X1GtBnholl6tVp3OyBSwE1r3yRUN4kZj1pzOpGl6HI5Y1XIrc32FXTTwDx_DcKCV7OgoUOipuYilC1j11McCe51YPJqfo65KDZvQRBA1BaHRt44WOyFcP7w-nuftE20Vlev")`
-            }}
-          >
-            {/* Dark Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/60 rounded-xl z-0" />
-            
-            {/* Content */}
-            <div className="relative z-10 flex flex-col gap-6 w-full">
-              <div className="flex flex-col gap-2 text-left max-w-2xl">
-                <h1 className="text-white text-4xl font-black leading-tight tracking-tighter md:text-6xl drop-shadow-lg">
-                  Your Partner in Health & Wellness.
-                </h1>
-                <h2 className="text-gray-100 text-base font-normal leading-normal md:text-lg drop-shadow-md">
-                  Expert travel vaccinations, weight loss support, and wellness injections right here in Kent
-                </h2>
-              </div>
-              <div className="flex flex-row gap-2 text-left max-w-2xl">
-                <Link href="/book-services">
-                  <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white/20 h-12 px-5 bg-green-600 text-white text-base font-bold hover:bg-[#005A5B]/90 transition-colors shadow-lg">
-                    <span className="truncate">Book an Appointment</span>
-                  </button>
-                </Link>
-                <Link href="/Services/services">
-                  <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white/30 h-12 px-5 bg-white/10 backdrop-blur-sm text-white text-base font-bold hover:bg-white/20 transition-colors shadow-lg">
-                    <span className="truncate">View Services</span>
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        logo={{
+          url: "",
+          alt: "OH Pharmacy Logo",
+          text: "Welcome to OH Pharmacy"
+        }}
+        title={
+          <>
+            Your Partner in <br />
+            <span className="text-primary">Health & Wellness</span>
+          </>
+        }
+        subtitle="Expert travel vaccinations, weight loss support, and wellness injections right here in Kent. Providing comprehensive healthcare services with care and precision."
+        callToAction={{
+          text: "BOOK AN APPOINTMENT",
+          href: "/book-services",
+        }}
+        backgroundImage="https://lh3.googleusercontent.com/aida-public/AB6AXuACJT9xEVblSG9BgdONhzauh1Pgqs2YiQdALqxWci0h6zigwK-v1_UZdkYnTWpdD3y9Jzw6TaFya9Mrwxhc6wgBMyl64LPPDaqZrHxOrxy-qf7c_DION9I6IX8ug_-i7ke6U19FYMIr2X1GtBnholl6tVp3OyBSwE1r3yRUN4kZj1pzOpGl6HI5Y1XIrc32FXTTwDx_DcKCV7OgoUOipuYilC1j11McCe51YPJqfo65KDZvQRBA1BaHRt44WOyFcP7w-nuftE20Vlev"
+        contactInfo={{
+          website: "ohpharmacy.co.uk",
+          phone: "0333 006 5650",
+          address: "River House, 1 Maidstone Road, Sidcup, DA14 5RH",
+        }}
+      />
 
       {/* Featured Services */}
       <Feature72

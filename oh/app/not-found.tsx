@@ -1,7 +1,10 @@
-import Link from 'next/link';
+'use client';
 import { Button } from '../components/ui/Button';
+import { useRouter } from 'next/navigation';
+
 
 export default function NotFound() {
+  const router = useRouter();
   return (
     <div className="min-h-screen flex items-center justify-center bg-white-off">
       <div className="text-center px-4">
@@ -15,10 +18,10 @@ export default function NotFound() {
           The page you're looking for doesn't exist or has been moved.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button href="/" variant="primary" size="lg">
+          <Button onClick={() => router.push('/')} variant="default" size="lg">
             Go Home
           </Button>
-          <Button href="/Services/services" variant="outline" size="lg">
+          <Button onClick={() => router.push('/Services')} variant="outline" size="lg">
             View Services
           </Button>
         </div>
