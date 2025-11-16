@@ -29,7 +29,7 @@ export default function Header() {
         <div className="flex items-center space-x-4">
           {/* Book Appointment Button - Desktop */}
           <div className="hidden md:block">
-            <Link href="/book-services" className="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-colors">
+            <Link href="/book-services" className="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white h-12 px-6 py-4 bg-green-600 text-white text-sm font-bold hover:bg-primary/90 transition-colors">
               Book Appointment
             </Link>
           </div>

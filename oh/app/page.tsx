@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-[#101922]">
       {/* Hero Section */}
-      <section className="flex justify-center items-center w-full">
+      <section className="flex justify-center bg-[#F4F7F6] dark:bg-[#182430] items-center w-full">
         <div className="w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-10 md:py-20">
           <div 
             className="relative flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-start justify-end p-6 md:p-12 overflow-hidden"
@@ -29,7 +29,7 @@ export default function Home() {
               </div>
               <div className="flex flex-row gap-2 text-left max-w-2xl">
                 <Link href="/book-services">
-                  <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white/20 h-12 px-5 bg-[#005A5B] text-white text-base font-bold hover:bg-[#005A5B]/90 transition-colors shadow-lg">
+                  <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white/20 h-12 px-5 bg-green-600 text-white text-base font-bold hover:bg-[#005A5B]/90 transition-colors shadow-lg">
                     <span className="truncate">Book an Appointment</span>
                   </button>
                 </Link>
@@ -94,12 +94,12 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/about">
                   <button
-                   className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-[#005A5B] text-white text-base font-bold hover:bg-[#005A5B]/90 transition-colors">
+                   className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white/20 h-12 px-5 bg-green-600 text-white text-base font-bold hover:bg-[#005A5B]/90 transition-colors">
                     <span className="truncate">Meet Our Team</span>
                   </button>
                 </Link>
                 <Link href="/contact">
-                  <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-[#E8A87C] text-[#005A5B] font-bold hover:bg-[#E8A87C]/90 transition-colors">
+                  <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white/20 h-12 px-5 bg-[#E8A87C] text-[#005A5B] font-bold hover:bg-[#E8A87C]/90 transition-colors">
                     <span className="truncate">Contact Us Today</span>
                   </button>
                 </Link>
@@ -173,7 +173,7 @@ export default function Home() {
                 </div>
                 <div>
                   <button
-                    className="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-5 bg-[#005A5B] text-white text-base font-bold hover:bg-[#005A5B]/90 transition-colors"
+                    className="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white/20 h-12 px-5 bg-green-600 text-white text-base font-bold hover:bg-[#005A5B]/90 transition-colors"
                     type="submit"
                   >
                     <span className="truncate">Send Message</span>
