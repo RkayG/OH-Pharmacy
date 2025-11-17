@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Hero from '@/components/ui/Hero';
 import ServiceGrid from '@/components/services/ServiceGrid';
-import { services } from '@/lib/services';
+import { services, type Service } from '@/lib/services';
 
 export const metadata: Metadata = {
   title: 'Book Services Online - OH Pharmacy',
@@ -9,9 +9,15 @@ export const metadata: Metadata = {
 };
 
 export default function BookServicesPage() {
-  // Filter only bookable services (those with booking URLs or all services)
+  // Filter only bookable services (those with booking URLs or specific categories)
+  const bookableCategories: Array<Exclude<Service['category'], 'general'>> = [
+    'travel',
+    'vaccination',
+    'weight-loss',
+  ];
+
   const bookableServices = services.filter(service => 
-    service.bookingUrl || service.category === 'general' || service.category === 'travel'
+    Boolean(service.bookingUrl) || bookableCategories.includes(service.category)
   );
 
   return (

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 export default function TravelVaccinesPage() {
-  const vaccines = getServicesByCategory('vaccine');
+  const vaccines = getServicesByCategory('vaccination');
 
   return (
     <>

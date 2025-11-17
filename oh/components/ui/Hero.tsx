@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import Link from 'next/link';
 import { Button } from './Button';
 import { cn } from '@/lib/utils';
 
@@ -57,8 +58,8 @@ export default function Hero({
             </p>
           )}
           {children || (
-            <Button href={ctaHref} variant="secondary" size="lg">
-              {ctaText}
+            <Button asChild variant="secondary" size="lg">
+              <Link href={ctaHref}>{ctaText}</Link>
             </Button>
           )}
         </div>
