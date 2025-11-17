@@ -36,9 +36,9 @@ export default function ServicesPage() {
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold text-[#111418] mb-4">Browse by Category</h2>
+            <h2 className="text-3xl font-bold text-[#111418] mb-4">Categories</h2>
             <p className="text-[#617589] text-lg max-w-2xl mx-auto">
-              Explore our comprehensive range of healthcare services organized by category
+              Explore our comprehensive range of healthcare services
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:gap-8">

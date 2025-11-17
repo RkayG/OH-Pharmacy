@@ -28,7 +28,7 @@ export default function Header() {
         {/* Right Side - Book Appointment + Mobile Menu */}
         <div className="flex items-center space-x-4">
           {/* Book Appointment Button - Desktop */}
-          <div className="hidden xl:block">
+          <div className="hidden md:block">
             <Link href="/book-services" className="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white h-12 px-6 py-4 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-colors">
               Book Appointment
             </Link>
@@ -38,7 +38,7 @@ export default function Header() {
           <button
             data-collapse-toggle="mega-menu-full"
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-text-light rounded-lg md:hidden hover:bg-secondary/10 hover:text-text-light focus:outline-none focus:ring-2 focus:ring-border"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-text-light rounded-lg xl:hidden hover:bg-secondary/10 hover:text-text-light focus:outline-none focus:ring-2 focus:ring-border"
             aria-controls="mega-menu-full"
             aria-expanded={mobileMenuOpen}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -49,61 +49,60 @@ export default function Header() {
             </svg>
           </button>
         </div>
-
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <div className="md:hidden border-t border-border bg-background-light">
-            <div className="px-4 py-4">
-              <nav className="flex flex-col gap-4">
-                <Link
-                  href="/"
-                  className="block py-2 px-3 text-text-light hover:text-primary border-b border-border hover:bg-secondary/10"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Home
-                </Link>
-                <Link
-                  href="/Services/services"
-                  className="block py-2 px-3 text-text-light hover:text-primary border-b border-border hover:bg-secondary/10"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Services
-                </Link>
-                <Link
-                  href="/Travel-Clinic/travel-vaccination"
-                  className="block py-2 px-3 text-text-light hover:text-primary border-b border-border hover:bg-secondary/10"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Travel Clinic
-                </Link>
-                <Link
-                  href="/Services/services"
-                  className="block py-2 px-3 text-text-light hover:text-primary border-b border-border hover:bg-secondary/10"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  About
-                </Link>
-                <Link
-                  href="/Services/contact-us"
-                  className="block py-2 px-3 text-text-light hover:text-primary border-b border-border hover:bg-secondary/10"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Contact
-                </Link>
-
-                <Link
-                  href="/book-services"
-                  className="block mt-4 px-6 py-3 bg-primary text-white rounded-full border border-primary text-center hover:bg-primary/90 transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Book Appointment
-                </Link>
-              </nav>
-            </div>
-          </div>
-        )}
-
       </div>
+
+      {/* Mobile Navigation */}
+      {mobileMenuOpen && (
+        <div className="xl:hidden border-t border-border bg-background-light w-full">
+          <div className="px-4 py-4">
+            <nav className="flex flex-col gap-4">
+              <Link
+                href="/"
+                className="block py-2 px-3 text-text-light hover:text-primary border-b border-border hover:bg-secondary/10"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Home
+              </Link>
+              <Link
+                href="/Services"
+                className="block py-2 px-3 text-text-light hover:text-primary border-b border-border hover:bg-secondary/10"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Services
+              </Link>
+              <Link
+                href="/Travel-Clinic/travel-vaccination"
+                className="block py-2 px-3 text-text-light hover:text-primary border-b border-border hover:bg-secondary/10"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Travel Clinic
+              </Link>
+              <Link
+                href="/Services/services"
+                className="block py-2 px-3 text-text-light hover:text-primary border-b border-border hover:bg-secondary/10"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About
+              </Link>
+              <Link
+                href="/Services/contact-us"
+                className="block py-2 px-3 text-text-light hover:text-primary border-b border-border hover:bg-secondary/10"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact
+              </Link>
+
+              <Link
+                href="/book-services"
+                className="block mt-4 px-6 py-3 bg-primary text-white rounded-full border border-primary text-center hover:bg-primary/90 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Book Appointment
+              </Link>
+            </nav>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
