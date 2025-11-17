@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { PharmacyNavigation } from '@/components/ui/pharmacy-navigation';
+import { PharmacyNavigation, healthServices, vaccinationServices, consultationServices } from '@/components/ui/pharmacy-navigation';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -99,6 +99,54 @@ export default function Header() {
               >
                 Book Appointment
               </Link>
+
+              <div className="pt-6 border-t border-border">
+                <p className="text-sm font-semibold text-text-dark uppercase tracking-wide mb-2">Health Services</p>
+                <div className="grid grid-cols-1 gap-2">
+                  {healthServices.map((service) => (
+                    <Link
+                      key={service.title}
+                      href={service.href}
+                      className="text-sm text-text-light hover:text-primary"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {service.title}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              <div className="pt-6 border-t border-border">
+                <p className="text-sm font-semibold text-text-dark uppercase tracking-wide mb-2">Vaccinations</p>
+                <div className="grid grid-cols-1 gap-2">
+                  {vaccinationServices.map((service) => (
+                    <Link
+                      key={service.title}
+                      href={service.href}
+                      className="text-sm text-text-light hover:text-primary"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {service.title}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              <div className="pt-6 border-t border-border">
+                <p className="text-sm font-semibold text-text-dark uppercase tracking-wide mb-2">Consultations</p>
+                <div className="grid grid-cols-1 gap-2">
+                  {consultationServices.map((service) => (
+                    <Link
+                      key={service.title}
+                      href={service.href}
+                      className="text-sm text-text-light hover:text-primary"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {service.title}
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </nav>
           </div>
         </div>

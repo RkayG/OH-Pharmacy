@@ -14,7 +14,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 
-const healthServices = [
+export const healthServices = [
   {
     title: "Private Health Checks",
     href: "/Services/private-health-checks",
@@ -62,7 +62,7 @@ const healthServices = [
   },
 ]
 
-const vaccinationServices = [
+export const vaccinationServices = [
   {
     title: "Travel Vaccinations",
     href: "/Travel-Clinic/travel-vaccination",
@@ -110,7 +110,7 @@ const vaccinationServices = [
   },
 ]
 
-const consultationServices = [
+export const consultationServices = [
   {
     title: "Private Prescriptions",
     href: "/Services/private-prescriptions",
