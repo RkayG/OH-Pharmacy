@@ -55,13 +55,13 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
       <section
         ref={ref}
         className={cn(
-          "relative flex w-full flex-col overflow-hidden  bg-[#F4F7F6] dark:bg-[#182430]text-foreground md:flex-row",
+          "relative flex w-full container mx-auto flex-col overflow-hidden  bg-[#F4F7F6] dark:bg-[#182430]text-foreground md:flex-row",
           className
         )}
         {...props}
       >
         {/* Left Side: Content */}
-        <div className="flex w-full flex-col justify-between p-8 md:w-1/2 md:p-8 lg:w-3/5 lg:p-20 lg:pl-38">
+        <div className="flex w-full flex-col justify-between p-8 md:w-1/2 md:p-8 lg:w-3/5 lg:p-20">
             {/* Top Section: Logo & Main Content */}
             <div>
                 <header className="mb-12">

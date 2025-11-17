@@ -72,7 +72,7 @@ export default function Home() {
       
 
       {/* About Us Section */}
-      <section id="about" className="w-full bg-[#F4F7F6] dark:bg-[#182430] py-16 md:py-24">
+      <section id="about" className="w-full container mx-auto bg-[#F4F7F6] dark:bg-[#182430] py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="flex flex-col gap-6">

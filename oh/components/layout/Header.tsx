@@ -8,7 +8,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-background-light fixed w-full z-20 top-0 start-0 border-b border-border relative">
+    <nav className="bg-background-light container mx-auto fixed w-full z-20 top-0 start-0 border-b border-border relative">
       <div className="flex items-center justify-between py-8 mx-auto lg:px-12 px-4 p-4">
         {/* Logo - Left */}
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -21,14 +21,14 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation - Center */}
-        <div className="hidden lg:flex">
+        <div className="hidden xl:flex">
           <PharmacyNavigation />
         </div>
 
         {/* Right Side - Book Appointment + Mobile Menu */}
         <div className="flex items-center space-x-4">
           {/* Book Appointment Button - Desktop */}
-          <div className="hidden lg:block">
+          <div className="hidden xl:block">
             <Link href="/book-services" className="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white h-12 px-6 py-4 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-colors">
               Book Appointment
             </Link>
