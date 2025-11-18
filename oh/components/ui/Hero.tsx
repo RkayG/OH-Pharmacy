@@ -66,7 +66,7 @@ export default function Hero({
       </div>
       
       {/* Decorative elements */}
-      <div className="absolute bottom-0 left-0 right-0 h-20  bg-white-off" style={{ clipPath: 'polygon(0 50%, 100% 0%, 100% 100%, 0% 100%)' }} />
+      <div className="absolute bottom-0 left-0 right-0 h-20  bg-white" style={{ clipPath: 'polygon(0 50%, 100% 0%, 100% 100%, 0% 100%)' }} />
     </section>
   );
 }

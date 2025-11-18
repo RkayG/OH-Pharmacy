@@ -79,7 +79,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
 
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             {/* Full Description */}
             {service.fullDescription && (
               <div className="prose prose-lg max-w-none mb-12">
@@ -142,7 +142,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
             {/* Related Services */}
             {relatedServices.length > 0 && (
               <div>
-                <h3 className="text-2xl font-display font-semibold text-text-dark mb-6">
+                <h3 className="text-2xl font-display font-semibold text-black mb-6">
                   Related Services
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

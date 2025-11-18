@@ -17,7 +17,7 @@ export default function ServiceGrid({ services, showBooking = true }: ServiceGri
   }
 
   return (
-    <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
+    <div className="grid gap-6 md:grid-cols-3 lg:gap-8">
       {services.map((service) => (
         <div
           key={service.id}
@@ -31,10 +31,10 @@ export default function ServiceGrid({ services, showBooking = true }: ServiceGri
             />
           </div>
           <div className="px-6 py-8 md:px-8 md:py-10 lg:px-10 lg:py-12 flex flex-col flex-grow">
-            <h3 className="mb-3 text-lg font-semibold md:mb-4 md:text-2xl lg:mb-6 text-[#111418]">
+            <h3 className="mb-3 text-lg font-semibold md:mb-4 lg:mb-6 text-[#111418]">
               {service.title}
             </h3>
-            <p className="text-[#617589] lg:text-lg mb-6 flex-grow">
+            <p className="text-[#617589] mb-6 flex-grow">
               {service.description}
             </p>
             {service.price && (

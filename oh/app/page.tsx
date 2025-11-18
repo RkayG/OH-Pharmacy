@@ -19,7 +19,7 @@ export default function Home() {
             <span className="text-primary">Health & Wellness</span>
           </>
         }
-        subtitle="Expert travel vaccinations, weight loss support, and wellness injections right here in Kent. Providing comprehensive healthcare services with care and precision."
+        subtitle="We provide expert travel vaccinations, weight loss programmes, wellness injections, and comprehensive private healthcare services. We are dedicated to supporting your health and wellbeing with personalized care and professional expertise."
         callToAction={{
           text: "BOOK AN APPOINTMENT",
           href: "/book-services",
@@ -73,7 +73,7 @@ export default function Home() {
 
       {/* About Us Section */}
       <section id="about" className="w-full  mx-auto bg-[#F4F7F6] dark:bg-[#182430] py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="flex flex-col gap-6">
               <h2 className="text-[#111418] dark:text-[#F4F7F6] text-3xl font-bold tracking-tight">Committed to Your Wellbeing</h2>
