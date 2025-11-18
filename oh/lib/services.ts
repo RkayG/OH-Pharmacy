@@ -559,7 +559,7 @@ export const services: Service[] = [
     slug: '/weight-loss-service',
     category: 'weight-loss',
     description: 'Private injectable weight loss programme with expert support.',
-    fullDescription: 'Take charge of your weight loss journey with our private weight loss service in Sidcup, in partnership with Expert Weight Loss. We offer a comprehensive service starting with an online consultation to assess your eligibility. We also offer exercise and diet advice to help you develop healthy living habits so that you can maintain your body weight in the long term. Start your weight loss journey today and improve your health and confidence. Our weight loss service is designed to put you in control of your weight loss journey. The collaborative approach of Expert Weight Loss and Rifaray Pharmacy gives you convenience and comprehensive support throughout the programme. You will have regular check-in appointments with the pharmacy team and your stats will be available through the patient dashboard for you to track your progress along the way.',
+    fullDescription: 'Take charge of your weight loss journey with our private weight loss service in Canterbury, in partnership with Expert Weight Loss. We offer a comprehensive service starting with an online consultation to assess your eligibility. We also offer exercise and diet advice to help you develop healthy living habits so that you can maintain your body weight in the long term. Start your weight loss journey today and improve your health and confidence. Our weight loss service is designed to put you in control of your weight loss journey. The collaborative approach of Expert Weight Loss and OH Pharmacy gives you convenience and comprehensive support throughout the programme. You will have regular check-in appointments with the pharmacy team and your stats will be available through the patient dashboard for you to track your progress along the way.',
     features: [
       'Online consultations',
       'Diet and exercise advice',
@@ -594,7 +594,7 @@ export const services: Service[] = [
     slug: '/Services/vitamin-b12',
     category: 'lifestyle',
     description: 'Private Vitamin B12 injection service. Book your appointment online.',
-    fullDescription: 'We offer a private vitamin B12 injection service in Sidcup at our clinic. Simply complete an online consultation and book an appointment online. Once your order is reviewed and approved by our doctors/prescribers, you will be able to attend the pharmacy to get the injection. This service must be ordered online.',
+    fullDescription: 'We offer a private vitamin B12 injection service in Canterbury at our clinic. Simply complete an online consultation and book an appointment online. Once your order is reviewed and approved by our doctors/prescribers, you will be able to attend the pharmacy to get the injection. This service must be ordered online.',
     price: '£29',
     bookingUrl: 'https://www.treatlocal.co.uk/online-booking/sidcup/vitamin-b12-injection-service/appointment',
     image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop',
@@ -605,7 +605,7 @@ export const services: Service[] = [
     slug: '/Services/earwax-removal-service',
     category: 'lifestyle',
     description: 'Microsuction earwax removal service. Safe and professional.',
-    fullDescription: 'We offer a private microsuction earwax removal service in Sidcup at Rifaray Pharmacy. Book your appointment online.',
+    fullDescription: 'We offer a private microsuction earwax removal service in Canterbury at OH Pharmacy. Book your appointment online.',
     image: 'https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=400&h=300&fit=crop',
   },
   {

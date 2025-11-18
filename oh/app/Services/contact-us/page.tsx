@@ -38,7 +38,7 @@ export default function ContactUsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
             {/* LEFT — GET IN TOUCH FORM */}
-            <div className="bg-white rounded-xl shadow-md p-8">
+            <div className="bg-white rounded-xl border border-border p-8">
 
               <form className="space-y-6">
                 {/* NAME */}
@@ -88,7 +88,7 @@ export default function ContactUsPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
               {/* Address */}
-              <Card>
+              <Card className="border border-border shadow-none">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
                     <FaMapMarkerAlt className="text-white text-2xl" />
@@ -98,15 +98,16 @@ export default function ContactUsPage() {
                   </h3>
                   <p className="text-text-light text-sm leading-relaxed">
                     OH Pharmacy <br />
-                    River House <br />
-                    1 Maidstone Road <br />
-                    Sidcup, DA14 5RH
+                    6 - 8 Longmarket <br />
+                    Canterbury <br />
+                    CT1 2JS <br />
+                    United Kingdom
                   </p>
                 </div>
               </Card>
 
               {/* Phone */}
-              <Card>
+              <Card className="border border-border shadow-none">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mx-auto mb-4">
                     <FaPhone className="text-white text-2xl" />
@@ -124,7 +125,7 @@ export default function ContactUsPage() {
               </Card>
 
               {/* Email */}
-              <Card>
+              <Card className="border border-border shadow-none">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
                     <FaEnvelope className="text-white text-2xl" />
@@ -142,7 +143,7 @@ export default function ContactUsPage() {
               </Card>
 
               {/* Opening Hours */}
-              <Card>
+              <Card className="border border-border shadow-none">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mx-auto mb-4">
                     <FaClock className="text-white text-2xl" />

@@ -122,8 +122,10 @@ export default function Footer() {
                 <FaMapMarkerAlt className="text-[#005A5B] mt-1 flex-shrink-0" size={18} />
                 <span className="text-gray-300 text-sm leading-relaxed">
                   OH Pharmacy<br />
-                  River House, 1 Maidstone Road<br />
-                  Sidcup, DA14 5RH
+                  6 - 8 Longmarket<br />
+                  Canterbury<br />
+                  CT1 2JS<br />
+                  United Kingdom
                 </span>
               </li>
               <li className="flex items-center gap-3">
