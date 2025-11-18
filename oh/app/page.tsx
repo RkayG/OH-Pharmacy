@@ -5,7 +5,7 @@ import { HeroSection } from '@/components/ui/hero-section-2';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white dark:bg-[#101922]">
+    <div className="min-h-screen max-w-screen-2xl mx-auto bg-white dark:bg-[#101922]">
       {/* Hero Section */}
       <HeroSection
         logo={{
@@ -72,7 +72,7 @@ export default function Home() {
       
 
       {/* About Us Section */}
-      <section id="about" className="w-full container mx-auto bg-[#F4F7F6] dark:bg-[#182430] py-16 md:py-24">
+      <section id="about" className="w-full  mx-auto bg-[#F4F7F6] dark:bg-[#182430] py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="flex flex-col gap-6">

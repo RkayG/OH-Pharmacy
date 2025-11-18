@@ -55,7 +55,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
       <section
         ref={ref}
         className={cn(
-          "relative flex w-full container mx-auto flex-col overflow-hidden  bg-[#F4F7F6] dark:bg-[#182430]text-foreground md:flex-row",
+          "relative flex w-full mx-auto flex-col overflow-hidden  bg-[#F4F7F6] dark:bg-[#182430]text-foreground md:flex-row",
           className
         )}
         {...props}

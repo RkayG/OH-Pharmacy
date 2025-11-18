@@ -27,7 +27,7 @@ export default function Hero({
   return (
     <section
       className={cn(
-        'relative py-20 md:py-32 overflow-hidden',
+        'relative py-18 md:py-30 overflow-hidden',
         image && 'bg-cover bg-center bg-no-repeat',
         className
       )}
@@ -35,7 +35,7 @@ export default function Hero({
     >
       {/* Overlay */}
       {image && (
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary-light/80" />
+        <div className="absolute inset-0 bg-[#005A5B]/80" />
       )}
       {!image && (
         <div className="absolute inset-0 bg-gradient-primary" />
@@ -66,7 +66,7 @@ export default function Hero({
       </div>
       
       {/* Decorative elements */}
-      <div className="absolute bottom-0 left-0 right-0 h-20 bg-white-off" style={{ clipPath: 'polygon(0 50%, 100% 0%, 100% 100%, 0% 100%)' }} />
+      <div className="absolute bottom-0 left-0 right-0 h-20  bg-white-off" style={{ clipPath: 'polygon(0 50%, 100% 0%, 100% 100%, 0% 100%)' }} />
     </section>
   );
 }

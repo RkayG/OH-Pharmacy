@@ -8,8 +8,8 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-background-light container mx-auto fixed w-full z-20 top-0 start-0 border-b border-border relative">
-      <div className="flex items-center justify-between py-8 mx-auto lg:px-12 px-4 p-4">
+    <nav className="bg-background-light mx-auto fixed w-full z-20 top-0 start-0 border-b border-border relative">
+      <div className="flex items-center justify-between py-8 mx-auto  px-4 p-4">
         {/* Logo - Left */}
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <div className="text-primary">
@@ -21,7 +21,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation - Center */}
-        <div className="hidden xl:flex">
+        <div className="hidden lg:flex">
           <PharmacyNavigation />
         </div>
 
@@ -38,7 +38,7 @@ export default function Header() {
           <button
             data-collapse-toggle="mega-menu-full"
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-text-light rounded-lg xl:hidden hover:bg-secondary/10 hover:text-text-light focus:outline-none focus:ring-2 focus:ring-border"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-text-light rounded-lg lg:hidden hover:bg-secondary/10 hover:text-text-light focus:outline-none focus:ring-2 focus:ring-border"
             aria-controls="mega-menu-full"
             aria-expanded={mobileMenuOpen}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -53,7 +53,7 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="xl:hidden border-t border-border bg-background-light w-full">
+        <div className="lg:hidden border-t border-border bg-background-light w-full">
           <div className="px-4 py-4">
             <nav className="flex flex-col gap-4">
               <Link

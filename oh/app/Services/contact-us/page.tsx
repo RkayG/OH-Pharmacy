@@ -19,18 +19,19 @@ export default function ContactUsPage() {
       <Hero
         title="Contact Us"
         description="Get in touch with OH Pharmacy. We are here to help with all your healthcare needs."
+        image="https://lh3.googleusercontent.com/aida-public/AB6AXuB_csFz9j5Dee86UdXPpn_9P6Al3rLszCLqAXcqCx0tX_RoumFdDHumzNBSb5UqWEoK-rO7UwTWf1t1-K5caquHHASVqhnpJhsFRuykQ4h4-k1NIYqWNpSpFHOHz2Fgp6WEmeh7X3TbJ6BkXBhOa0tQjyhj7joChIOF6Lqe1AiktM1r0fDVgHj2mbIdp8L9QEgFWKV0jWgxuUZYKigD8h7vOYmA2wDQg19JT6ffOpipRVU1TZWm9XBZy9WTc7NAQNum1eZiY0e5gu6b"
       />
 
       {/* FORM + CONTACT CARDS SIDE-BY-SIDE */}
       <section className="py-16 bg-white-off">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12"> 
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-[#111418] dark:text-[#F4F7F6]">
+           {/*  <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-[#111418] dark:text-[#F4F7F6]">
                Get In Touch 
             </h2> 
             <p className="mt-4 text-lg text-[#617589] dark:text-[#a0aec0]"> 
               We're here to help. Contact us with any questions you may have. 
-            </p> 
+            </p>  */}
           
           </div>
 
