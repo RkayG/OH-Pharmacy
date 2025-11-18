@@ -27,7 +27,7 @@ export default function Hero({
   return (
     <section
       className={cn(
-        'relative py-16 md:py-28 overflow-hidden',
+        'relative py-10 md:py-24 overflow-hidden',
         image && 'bg-cover bg-center bg-no-repeat',
         className
       )}

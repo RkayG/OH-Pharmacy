@@ -58,7 +58,7 @@ export default function CategoryCard({ category, label, description, serviceCoun
           <span className="text-sm text-[#617589]">
             {serviceCount} service{serviceCount !== 1 ? 's' : ''}
           </span>
-          <span className="group inline-flex items-center text-sm font-semibold text-[#005A5B] hover:text-[#005A5B]/80 transition-colors">
+          <span className="group inline-flex items-center justify-center rounded-full bg-primary text-white font-semibold hover:bg-primary/90 transition-colors px-6 py-3 text-sm">
             View Services
             <ArrowRight className="ml-2 size-4 transition-transform group-hover:translate-x-1" />
           </span>
