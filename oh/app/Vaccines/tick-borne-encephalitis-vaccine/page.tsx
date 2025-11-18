@@ -4,7 +4,7 @@ import { getServiceBySlug } from '@/lib/services';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'Tick-Borne Encephalitis Vaccine - OH Pharmacy',
+  title: 'Tick-Borne Encephalitis Vaccine - OH Health + Pharmacy',
   description: 'Tick-Borne Encephalitis vaccination.',
 };
 

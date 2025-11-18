@@ -4,7 +4,7 @@ import ServiceList from '@/components/services/ServiceList';
 import { services } from '@/lib/services';
 
 export const metadata: Metadata = {
-  title: 'All Services - OH Pharmacy',
+  title: 'All Services - OH Health + Pharmacy',
   description: 'Find out more about our range of private services. We offer access to expert healthcare services in Canterbury.',
 };
 

@@ -64,7 +64,7 @@ export const Feature72 = ({
           {linkUrl && linkText && (
             <Link
               href={linkUrl}
-              className="group flex items-center text-xs font-medium md:text-base lg:text-lg text-[#005A5B] hover:text-[#005A5B]/80 transition-colors"
+              className="group inline-flex items-center justify-center rounded-full bg-primary text-white font-semibold hover:bg-primary/90 transition-colors px-6 py-3 text-sm md:text-base"
             >
               {linkText}
               <ArrowRight className="ml-2 size-4 transition-transform group-hover:translate-x-1" />
@@ -94,7 +94,7 @@ export const Feature72 = ({
                 {feature.href && (
                   <Link
                     href={feature.href}
-                    className="group inline-flex items-center text-sm font-semibold text-[#005A5B] hover:text-[#005A5B]/80 transition-colors mt-auto"
+                    className="group inline-flex items-center justify-center rounded-full bg-primary text-white font-semibold hover:bg-primary/90 transition-colors mt-auto px-6 py-3 text-sm md:text-base"
                   >
                     Learn More
                     <ArrowRight className="ml-2 size-4 transition-transform group-hover:translate-x-1" />

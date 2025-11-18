@@ -3,8 +3,8 @@ import "./globals.css";
 import Layout from "@/components/layout/Layout";
 
 export const metadata: Metadata = {
-  title: "OH Pharmacy - Your Trusted Local Pharmacy",
-  description: "OH Pharmacy offers a wide range of private health services including travel vaccinations, weight loss programmes, and general pharmacy services. Book your appointment online.",
+  title: "OH Health + Pharmacy - Your Trusted Local Pharmacy",
+  description: "OH Health + Pharmacy offers a wide range of private health services including travel vaccinations, weight loss programmes, and general pharmacy services. Book your appointment online.",
 };
 
 export default function RootLayout({

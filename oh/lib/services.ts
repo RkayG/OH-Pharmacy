@@ -559,7 +559,7 @@ export const services: Service[] = [
     slug: '/weight-loss-service',
     category: 'weight-loss',
     description: 'Private injectable weight loss programme with expert support.',
-    fullDescription: 'Take charge of your weight loss journey with our private weight loss service in Canterbury, in partnership with Expert Weight Loss. We offer a comprehensive service starting with an online consultation to assess your eligibility. We also offer exercise and diet advice to help you develop healthy living habits so that you can maintain your body weight in the long term. Start your weight loss journey today and improve your health and confidence. Our weight loss service is designed to put you in control of your weight loss journey. The collaborative approach of Expert Weight Loss and OH Pharmacy gives you convenience and comprehensive support throughout the programme. You will have regular check-in appointments with the pharmacy team and your stats will be available through the patient dashboard for you to track your progress along the way.',
+    fullDescription: 'Take charge of your weight loss journey with our private weight loss service in Canterbury, in partnership with Expert Weight Loss. We offer a comprehensive service starting with an online consultation to assess your eligibility. We also offer exercise and diet advice to help you develop healthy living habits so that you can maintain your body weight in the long term. Start your weight loss journey today and improve your health and confidence. Our weight loss service is designed to put you in control of your weight loss journey. The collaborative approach of Expert Weight Loss and OH Health + Pharmacy gives you convenience and comprehensive support throughout the programme. You will have regular check-in appointments with the pharmacy team and your stats will be available through the patient dashboard for you to track your progress along the way.',
     features: [
       'Online consultations',
       'Diet and exercise advice',
@@ -605,7 +605,7 @@ export const services: Service[] = [
     slug: '/Services/earwax-removal-service',
     category: 'lifestyle',
     description: 'Microsuction earwax removal service. Safe and professional.',
-    fullDescription: 'We offer a private microsuction earwax removal service in Canterbury at OH Pharmacy. Book your appointment online.',
+    fullDescription: 'We offer a private microsuction earwax removal service in Canterbury at OH Health + Pharmacy. Book your appointment online.',
     image: 'https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=400&h=300&fit=crop',
   },
   {

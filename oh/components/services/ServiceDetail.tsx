@@ -92,13 +92,13 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
             {/* Features */}
             {service.features && service.features.length > 0 && (
               <div className="mb-12">
-                <h3 className="text-2xl font-display font-semibold text-text-dark mb-6">
+                <h3 className="text-2xl font-display font-semibold text-black mb-6">
                   Key Features
                 </h3>
                 <ul className="space-y-3">
                   {service.features.map((feature, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <FaCheckCircle className="text-accent mt-1 flex-shrink-0" />
+                      <FaCheckCircle className="text-primary mt-1 flex-shrink-0" />
                       <span className="text-text-light">{feature}</span>
                     </li>
                   ))}

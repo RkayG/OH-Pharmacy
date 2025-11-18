@@ -4,7 +4,7 @@ import { getServiceBySlug } from '@/lib/services';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'Private Weight Loss Service - OH Pharmacy',
+  title: 'Private Weight Loss Service - OH Health + Pharmacy',
   description: 'Begin your weight loss journey with our private service. We offer online consultations, expert support, and regular check-in appointments.',
 };
 

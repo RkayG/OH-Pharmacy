@@ -67,11 +67,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
                 <header className="mb-12">
                     {logo && (
                         <div className="flex items-center">
-                            {logo.url ? (
-                                <img src={logo.url} alt={logo.alt} className="mr-3 h-8" />
-                            ) : (
-                                <Pill className="mr-3 h-8 w-8 text-primary" />
-                            )}
+                           
                             <div>
                                 {logo.text && <p className="text-lg font-bold text-foreground">{logo.text}</p>}
                                 {slogan && <p className="text-xs tracking-wider text-muted-foreground">{slogan}</p>}

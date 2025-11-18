@@ -4,7 +4,7 @@ import ServiceGrid from '@/components/services/ServiceGrid';
 import { services, type Service } from '@/lib/services';
 
 export const metadata: Metadata = {
-  title: 'Book Services Online - OH Pharmacy',
+  title: 'Book Services Online - OH Health + Pharmacy',
   description: 'Book our expert healthcare services online 24/7. Travel vaccinations, weight loss programmes, and more. Book your appointment in minutes.',
 };
 

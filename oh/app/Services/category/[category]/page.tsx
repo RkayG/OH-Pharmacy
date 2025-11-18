@@ -76,12 +76,12 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   
   if (!categoryInfo) {
     return {
-      title: 'Category Not Found - OH Pharmacy',
+      title: 'Category Not Found - OH Health + Pharmacy',
     };
   }
 
   return {
-    title: `${categoryInfo.label} - OH Pharmacy`,
+    title: `${categoryInfo.label} - OH Health + Pharmacy`,
     description: categoryInfo.description,
   };
 }

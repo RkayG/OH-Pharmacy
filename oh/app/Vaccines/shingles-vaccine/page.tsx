@@ -4,7 +4,7 @@ import { getServiceBySlug } from '@/lib/services';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'Shingles Vaccine - OH Pharmacy',
+  title: 'Shingles Vaccine - OH Health + Pharmacy',
   description: 'Shingles (Herpes Zoster) vaccination.',
 };
 

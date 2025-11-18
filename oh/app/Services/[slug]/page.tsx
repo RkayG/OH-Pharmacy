@@ -17,25 +17,27 @@ export async function generateStaticParams(): Promise<Params[]> {
     }));
 }
 
-export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
-  const slug = `${SERVICE_SLUG_PREFIX}${params.slug}`;
+export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
+  const { slug: slugParam } = await params;
+  const slug = `${SERVICE_SLUG_PREFIX}${slugParam}`;
   const service = getServiceBySlug(slug);
 
   if (!service) {
     return {
-      title: 'Service - OH Pharmacy',
-      description: 'Discover the services we offer at OH Pharmacy.',
+      title: 'Service - OH Health + Pharmacy',
+      description: 'Discover the services we offer at OH Health + Pharmacy.',
     };
   }
 
   return {
-    title: `${service.title} - OH Pharmacy`,
+    title: `${service.title} - OH Health + Pharmacy`,
     description: service.description,
   };
 }
 
-export default function ServiceSlugPage({ params }: { params: Params }) {
-  const slug = `${SERVICE_SLUG_PREFIX}${params.slug}`;
+export default async function ServiceSlugPage({ params }: { params: Promise<Params> }) {
+  const { slug: slugParam } = await params;
+  const slug = `${SERVICE_SLUG_PREFIX}${slugParam}`;
   const service = getServiceBySlug(slug);
 
   if (!service) {

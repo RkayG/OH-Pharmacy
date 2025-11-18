@@ -10,8 +10,8 @@ export default function Home() {
       <HeroSection
         logo={{
           url: "",
-          alt: "OH Pharmacy Logo",
-          text: "Welcome to OH Pharmacy"
+          alt: "OH Health + Pharmacy Logo",
+          text: "Welcome to OH Health + Pharmacy"
         }}
         title={
           <>
@@ -42,7 +42,7 @@ export default function Home() {
             id: "weight-loss",
             title: "Weight Loss Service",
             description: "We offer a private weight loss service in partnership with Expert Weight Loss. Our service offers online consultations, diet and exercise advice and regular check-in appointments.",
-            image: "https://rifaraypharmacy.co.uk/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2024-12-14-at-10.36.01-AM-1-qyj3h4a2iaabn95491vhqv1wv8x5rspscb8ohkqxco.jpeg",
+            image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop',
             href: "/weight-loss-service"
           },
           {
@@ -65,6 +65,20 @@ export default function Home() {
             description: "We offer private speciality vaccines at our pharmacy, including Chickenpox, Shingles and HPV vaccines. Book your appointment online.",
             image: "https://rifaraypharmacy.co.uk/wp-content/uploads/elementor/thumbs/speciality-vaccine-1-1-qnr3drfp4oorwkskzsbfunflgb94chopd6f87fgtaw.jpg",
             href: "/Travel-Clinic/special-vaccination"
+          },
+          {
+            id: "earwax-removal",
+            title: "Earwax Removal",
+            description: "Professional microsuction earwax removal service. Safe, effective, and performed by trained professionals. Book your appointment online.",
+            image: "https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=400&h=300&fit=crop",
+            href: "/Services/earwax-removal-service"
+          },
+          {
+            id: "private-health-checks",
+            title: "Private Health Checks",
+            description: "Comprehensive health assessments and health MOTs to monitor your wellbeing. Includes blood pressure, cholesterol, and diabetes screening.",
+            image: "https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=400&h=300&fit=crop",
+            href: "/Services/private-health-checks"
           }
         ]}
       />
@@ -77,7 +91,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="flex flex-col gap-6">
               <h2 className="text-[#111418] dark:text-[#F4F7F6] text-3xl font-bold tracking-tight">Committed to Your Wellbeing</h2>
-              <p className="text-[#617589] dark:text-[#a0aec0]  text-base leading-relaxed">At OH Pharmacy, our mission is to provide exceptional, patient-centered care. We believe in building lasting relationships within our community, offering not just treatments but also trusted advice and support for your health journey. Our dedicated team is here to ensure you receive the professional and compassionate service you deserve.</p>
+              <p className="text-[#617589] dark:text-[#a0aec0]  text-base leading-relaxed">At OH Health + Pharmacy, our mission is to provide exceptional, patient-centered care. We believe in building lasting relationships within our community, offering not just treatments but also trusted advice and support for your health journey. Our dedicated team is here to ensure you receive the professional and compassionate service you deserve.</p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/Services">
                   <button
