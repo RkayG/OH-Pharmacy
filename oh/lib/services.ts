@@ -74,6 +74,22 @@ export const services: Service[] = [
     ],
     image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop',
   },
+    {
+    id: 'blood-test',
+    title: 'Private Blood Test',
+    slug: '/Services/blood-tests',
+    category: 'testing',
+    description: 'Private blood testing for general health, diagnostics, and screening.',
+    fullDescription: 'We offer a wide range of private blood tests including Full Blood Count (FBC), liver function, kidney function, hormone panels, and general health checks. Fast and confidential results.',
+    image: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=400&h=300&fit=crop',
+    features: [
+      'Full Blood Count (FBC)',
+      'Liver & Kidney Function Tests',
+      'Hormone Panels',
+      'General Health Blood Tests'
+    ]
+  },
+
 
   // 💉 Vaccinations & Immunisation
   {
