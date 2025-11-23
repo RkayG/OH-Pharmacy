@@ -38,7 +38,7 @@ export default function Hero({
         <div className="absolute inset-0 bg-[#005A5B]/80 border-b-6" />
       )}
       {!image && (
-        <div className="absolute inset-0 bg-gradient-primary" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#005A5B] to-[#007A7B]" />
       )}
       
       {/* Content */}
