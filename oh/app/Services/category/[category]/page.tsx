@@ -6,56 +6,84 @@ import { Service } from '@/lib/services';
 import { notFound } from 'next/navigation';
 import Breadcrumb from '@/components/ui/Breadcrumb';
 
-const categoryMap: Record<string, { label: string; description: string }> = {
-  'clinical': {
-    label: 'Clinical & Health Services',
-    description: 'Comprehensive health assessments, blood pressure checks, cholesterol testing, and more to help you monitor and manage your wellbeing.',
+const categoryMap: Record<
+  string,
+  { label: string; description: string; image: string }
+> = {
+  clinical: {
+    label: "Clinical & Health Services",
+    description:
+      "Comprehensive health assessments, blood pressure checks, cholesterol testing, and more to help you monitor and manage your wellbeing.",
+    image: "https://source.unsplash.com/1600x900/?healthcare,clinic",
   },
-  'vaccination': {
-    label: 'Vaccinations & Immunisation',
-    description: 'Flu vaccinations, travel vaccines, and routine immunisations to keep you and your family protected.',
+  vaccination: {
+    label: "Vaccinations & Immunisation",
+    description:
+      "Flu vaccinations, travel vaccines, and routine immunisations to keep you and your family protected.",
+    image: "https://source.unsplash.com/1600x900/?vaccine,immunisation",
   },
-  'travel': {
-    label: 'Travel Health Services',
-    description: 'Expert travel health consultations, antimalarials, and travel vaccination certificates for your journey.',
+  travel: {
+    label: "Travel Health Services",
+    description:
+      "Expert travel health consultations, antimalarials, and travel vaccination certificates for your journey.",
+    image: "https://source.unsplash.com/1600x900/?travel,health",
   },
-  'prescribing': {
-    label: 'Private Prescribing & Consultations',
-    description: 'Pharmacist prescriber consultations for UTIs, ear infections, skin conditions, and more.',
+  prescribing: {
+    label: "Private Prescribing & Consultations",
+    description:
+      "Pharmacist prescriber consultations for UTIs, ear infections, skin conditions, and more.",
+    image: "https://source.unsplash.com/1600x900/?doctor,consultation",
   },
-  'medication': {
-    label: 'Medication-Related Services',
-    description: 'Private prescriptions, repeat prescription collection, and emergency medication supply.',
+  medication: {
+    label: "Medication-Related Services",
+    description:
+      "Private prescriptions, repeat prescription collection, and emergency medication supply.",
+    image: "https://source.unsplash.com/1600x900/?pharmacy,medication",
   },
-  'children': {
-    label: 'Children & Family Services',
-    description: 'Childhood vaccinations, head lice treatment, and newborn health support for your family.',
+  children: {
+    label: "Children & Family Services",
+    description:
+      "Childhood vaccinations, head lice treatment, and newborn health support for your family.",
+    image: "/images/children.jpg",
   },
-  'testing': {
-    label: 'Testing & Screening Services',
-    description: 'STD/STI testing, blood tests, hormone testing, and comprehensive health screening.',
+  testing: {
+    label: "Testing & Screening Services",
+    description:
+      "STD/STI testing, blood tests, hormone testing, and comprehensive health screening.",
+    image: "https://source.unsplash.com/1600x900/?laboratory,test",
   },
-  'womens-health': {
-    label: 'Women\'s Health Services',
-    description: 'Contraception, UTI treatment, menopause consultations, and pregnancy testing.',
+  "womens-health": {
+    label: "Women’s Health Services",
+    description:
+      "Contraception, UTI treatment, menopause consultations, and pregnancy testing.",
+    image: "https://source.unsplash.com/1600x900/?women,health",
   },
-  'lifestyle': {
-    label: 'Lifestyle & Wellness Services',
-    description: 'Smoking cessation, vitamin B12 injections, earwax removal, and healthy lifestyle coaching.',
+  lifestyle: {
+    label: "Lifestyle & Wellness Services",
+    description:
+      "Smoking cessation, vitamin B12 injections, earwax removal, and healthy lifestyle coaching.",
+    image: "https://source.unsplash.com/1600x900/?wellness,healthy-lifestyle",
   },
-  'weight-loss': {
-    label: 'Weight Loss Services',
-    description: 'Injectable weight loss programmes with expert support and regular check-ins.',
+  "weight-loss": {
+    label: "Weight Loss Services",
+    description:
+      "Injectable weight loss programmes with expert support and regular check-ins.",
+    image: "https://source.unsplash.com/1600x900/?weightloss,fitness",
   },
-  'certificates': {
-    label: 'Certificates & Workplace Services',
-    description: 'Fit-to-fly certificates, occupational health vaccinations, and workplace medicals.',
+  certificates: {
+    label: "Certificates & Workplace Services",
+    description:
+      "Fit-to-fly certificates, occupational health vaccinations, and workplace medicals.",
+    image: "https://source.unsplash.com/1600x900/?certificate,workplace",
   },
-  'additional': {
-    label: 'Additional Services',
-    description: 'Needle disposal, mobility aids, eye care, and other essential pharmacy services.',
+  additional: {
+    label: "Additional Services",
+    description:
+      "Needle disposal, mobility aids, eye care, and other essential pharmacy services.",
+    image: "https://source.unsplash.com/1600x900/?healthcare,services",
   },
 };
+
 
 interface CategoryPageProps {
   params: Promise<{
@@ -108,10 +136,10 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     <>
       <Breadcrumb items={breadcrumbItems} />
       <Hero
-        title={categoryInfo.label}
-        description={categoryInfo.description}
-        image="https://lh3.googleusercontent.com/aida-public/AB6AXuB_csFz9j5Dee86UdXPpn_9P6Al3rLszCLqAXcqCx0tX_RoumFdDHumzNBSb5UqWEoK-rO7UwTWf1t1-K5caquHHASVqhnpJhsFRuykQ4h4-k1NIYqWNpSpFHOHz2Fgp6WEmeh7X3TbJ6BkXBhOa0tQjyhj7joChIOF6Lqe1AiktM1r0fDVgHj2mbIdp8L9QEgFWKV0jWgxuUZYKigD8h7vOYmA2wDQg19JT6ffOpipRVU1TZWm9XBZy9WTc7NAQNum1eZiY0e5gu6b"
-      />
+          title={categoryInfo.label}
+          description={categoryInfo.description}
+          image={categoryInfo.image}   // ← dynamic image
+        />
 
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

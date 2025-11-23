@@ -49,35 +49,35 @@ export default function Home() {
             id: "vitamin-b12",
             title: "Vitamin B12",
             description: "We offer a private Vitamin B12 injection service at our pharmacy. Please complete your order online to get the injection at the pharmacy.",
-            image: "https://rifaraypharmacy.co.uk/wp-content/uploads/elementor/thumbs/vitamin-B12-qce144eqv79v6iwx6f0p4216ezmqlm8trvy0srow2g.webp",
+            image: "/images/chicken-pox.jpg",
             href: "/Services/vitamin-b12"
           },
           {
             id: "travel-clinic",
             title: "Travel Clinic",
             description: "Are you travelling abroad soon? Get expert travel health advice, vaccines and antimalarials at our pharmacy.",
-            image: "https://rifaraypharmacy.co.uk/wp-content/uploads/elementor/thumbs/travel-clinic-4-qnr2retumi3bud9bi4iskah0yhexbkygyjzleklt94.jpg",
+            image: "/images/travel.jpg",
             href: "/Travel-Clinic/travel-vaccination"
           },
           {
             id: "speciality-vaccine",
             title: "Speciality Vaccine",
             description: "We offer private speciality vaccines at our pharmacy, including Chickenpox, Shingles and HPV vaccines. Book your appointment online.",
-            image: "https://rifaraypharmacy.co.uk/wp-content/uploads/elementor/thumbs/speciality-vaccine-1-1-qnr3drfp4oorwkskzsbfunflgb94chopd6f87fgtaw.jpg",
+            image: "/images/injection.jpg",
             href: "/Travel-Clinic/special-vaccination"
           },
           {
             id: "earwax-removal",
             title: "Earwax Removal",
             description: "Professional microsuction earwax removal service. Safe, effective, and performed by trained professionals. Book your appointment online.",
-            image: "https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=400&h=300&fit=crop",
+            image: "/images/ear-infection.jpg",
             href: "/Services/earwax-removal-service"
           },
           {
             id: "private-health-checks",
             title: "Private Health Checks",
             description: "Comprehensive health assessments and health MOTs to monitor your wellbeing. Includes blood pressure, cholesterol, and diabetes screening.",
-            image: "https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=400&h=300&fit=crop",
+            image: "/images/health-assessmt.jpg",
             href: "/Services/private-health-checks"
           }
         ]}
