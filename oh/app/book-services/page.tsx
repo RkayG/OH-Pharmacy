@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { Suspense } from 'react';
 import Hero from '@/components/ui/Hero';
 import BookingForm from '@/components/book/BookingForm';
 
@@ -18,7 +19,9 @@ export default function BookServicesPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <BookingForm />
+            <Suspense fallback={<div className="bg-white rounded-xl border border-primary p-8 md:p-12">Loading booking form...</div>}>
+              <BookingForm />
+            </Suspense>
           </div>
         </div>
       </section>

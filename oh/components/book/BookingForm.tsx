@@ -2,9 +2,11 @@
 
 import { services } from '@/lib/services';
 import { useState, useMemo, useEffect, useRef } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { FaSearch, FaCheck } from 'react-icons/fa';
 
 export default function BookingForm() {
+  const searchParams = useSearchParams();
   const [selectedService, setSelectedService] = useState<string>('');
   const [serviceSearch, setServiceSearch] = useState('');
   const [showServiceDropdown, setShowServiceDropdown] = useState(false);
@@ -22,6 +24,18 @@ export default function BookingForm() {
   const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   const timeOfDayOptions = ['Morning', 'Afternoon', 'Evening'];
   const contactMethods = ['Email', 'Phone', 'Either'];
+
+  // Pre-select service from query parameter
+  useEffect(() => {
+    const serviceId = searchParams.get('service');
+    if (serviceId) {
+      const service = services.find(s => s.id === serviceId);
+      if (service) {
+        setSelectedService(service.id);
+        setServiceSearch(service.title);
+      }
+    }
+  }, [searchParams]);
 
   // Filter services based on search
   const filteredServices = useMemo(() => {
@@ -85,33 +99,30 @@ export default function BookingForm() {
   };
 
   const validatePhoneNumber = (phone: string): boolean => {
-    // Remove +44 and check if remaining digits are valid UK phone number
+    // Remove all non-digit characters
     const digits = phone.replace(/\D/g, '');
-    let ukDigits = digits;
     
-    // Extract UK digits (remove country code if present)
+    // Must have at least +44 and some digits
+    if (digits.length < 3) {
+      return false;
+    }
+    
+    // Extract UK digits (remove country code 44 if present)
+    let ukDigits = digits;
     if (digits.startsWith('44')) {
       ukDigits = digits.slice(2);
-    } else if (digits.startsWith('0')) {
-      // If it starts with 0, that's fine (UK format)
-      ukDigits = digits;
     }
     
-    // UK phone numbers are typically 10-11 digits
-    // Mobile: 07xxx xxxxxx (11 digits starting with 0)
-    // Landline: 01xxx xxxxxx, 02x xxxx xxxx (10-11 digits starting with 0)
-    if (ukDigits.length < 10 || ukDigits.length > 11) {
+    // UK phone numbers after +44 are 10 digits (without leading 0)
+    // Mobile: +44 7xxx xxxxxx (10 digits starting with 7)
+    // Landline: +44 1xxx xxxxxx, +44 2x xxxx xxxx (10 digits starting with 1 or 2)
+    if (ukDigits.length !== 10) {
       return false;
     }
     
-    // Check if it starts with valid UK prefixes (0 followed by valid area codes)
-    if (!ukDigits.startsWith('0')) {
-      return false;
-    }
-    
-    // Valid UK prefixes: 01, 02, 03, 07, 08, 09
-    const validSecondDigits = ['1', '2', '3', '7', '8', '9'];
-    return validSecondDigits.includes(ukDigits[1]);
+    // Valid UK prefixes after +44: 1, 2, 3, 7, 8, 9
+    const validFirstDigits = ['1', '2', '3', '7', '8', '9'];
+    return validFirstDigits.includes(ukDigits[0]);
   };
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -120,15 +131,23 @@ export default function BookingForm() {
     
     setFormData({ ...formData, phone: formatted });
     
-    // Validate if user has entered something
+    // Validate if user has entered something beyond just +44
     if (formatted.length > 3) {
-      if (!validatePhoneNumber(formatted)) {
-        setPhoneError('Please enter a valid phone number');
+      const isValid = validatePhoneNumber(formatted);
+      if (isValid) {
+        setPhoneError(''); // Clear error when valid
       } else {
-        setPhoneError('');
+        // Only show error if user has entered enough digits to potentially be complete
+        const digits = formatted.replace(/\D/g, '');
+        const ukDigits = digits.startsWith('44') ? digits.slice(2) : digits;
+        if (ukDigits.length >= 10) {
+          setPhoneError('Please enter a valid phone number');
+        } else {
+          setPhoneError(''); // Don't show error while still typing
+        }
       }
     } else {
-      setPhoneError('');
+      setPhoneError(''); // Clear error if field is empty or just +44
     }
   };
 

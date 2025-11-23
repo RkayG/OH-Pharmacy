@@ -123,7 +123,7 @@ export default function Footer() {
                   United Kingdom
                 </span>
               </li>
-              <li className="flex items-center gap-3">
+              {/* <li className="flex items-center gap-3">
                 <FaPhone className="text-[#005A5B] flex-shrink-0" size={16} />
                 <a
                   href="tel:03330065650"
@@ -140,7 +140,7 @@ export default function Footer() {
                 >
                   info@ohpharmacy.co.uk
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
