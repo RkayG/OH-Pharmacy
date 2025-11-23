@@ -27,7 +27,7 @@ export default function Hero({
   return (
     <section
       className={cn(
-        'relative py-10 md:py-24 overflow-hidden',
+        'relative py-24 md:py-32 overflow-hidden  ',
         image && 'bg-cover bg-center bg-no-repeat',
         className
       )}
@@ -35,7 +35,7 @@ export default function Hero({
     >
       {/* Overlay */}
       {image && (
-        <div className="absolute inset-0 bg-[#005A5B]/80" />
+        <div className="absolute inset-0 bg-[#005A5B]/80 border-b-6" />
       )}
       {!image && (
         <div className="absolute inset-0 bg-gradient-primary" />
