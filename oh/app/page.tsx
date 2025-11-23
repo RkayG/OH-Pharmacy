@@ -19,7 +19,7 @@ export default function Home() {
             <span className="text-primary">Health & Wellness</span>
           </>
         }
-        subtitle="We provide expert travel vaccinations, weight loss programmes, wellness injections, and comprehensive private healthcare services. We are dedicated to supporting your health and wellbeing with personalized care and professional expertise."
+        subtitle="We provide expert travel vaccinations, weight loss programmes, wellness injections, and comprehensive private healthcare services."
         callToAction={{
           text: "BOOK AN APPOINTMENT",
           href: "/book-services",
@@ -34,7 +34,7 @@ export default function Home() {
       {/* Featured Services */}
       <Feature72
         heading="Featured Services"
-        description="Expert medical services tailored to your needs, delivered with care and precision. Our comprehensive healthcare solutions are designed to keep you and your family healthy."
+        description="Comprehensive medical solutions designed around you - combining advanced expertise with compassionate care."
         linkUrl="/Services"
         linkText="View All Services"
         features={[
