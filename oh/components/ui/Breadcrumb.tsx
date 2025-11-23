@@ -14,7 +14,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
   return (
     <nav className="bg-white-off py-4 border-b">
       <div className="container mx-auto px-4">
-        <ol className="flex items-center gap-2 text-sm text-text-light">
+        <ol className="flex items-center gap-2 text-sm text-text-light whitespace-nowrap">
           <li>
             <Link href="/" className="hover:text-primary transition-colors">
               <FaHome />
