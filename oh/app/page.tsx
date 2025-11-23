@@ -19,7 +19,7 @@ export default function Home() {
             <span className="text-primary">Health & Wellness</span>
           </>
         }
-        subtitle="We provide expert travel vaccinations, weight loss programmes, wellness injections, and comprehensive private healthcare services. We are dedicated to supporting your health and wellbeing with personalized care and professional expertise."
+        subtitle="We provide expert travel vaccinations, weight loss programmes, wellness injections, and comprehensive private healthcare services."
         callToAction={{
           text: "BOOK AN APPOINTMENT",
           href: "/book-services",
@@ -34,7 +34,7 @@ export default function Home() {
       {/* Featured Services */}
       <Feature72
         heading="Featured Services"
-        description="Expert medical services tailored to your needs, delivered with care and precision. Our comprehensive healthcare solutions are designed to keep you and your family healthy."
+        description="Comprehensive medical solutions designed around you - combining advanced expertise with compassionate care."
         linkUrl="/Services"
         linkText="View All Services"
         features={[
@@ -91,7 +91,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="flex flex-col gap-6">
               <h2 className="text-[#111418] dark:text-[#F4F7F6] text-3xl font-bold tracking-tight">Committed to Your Wellbeing</h2>
-              <p className="text-[#617589] dark:text-[#a0aec0]  text-base leading-relaxed">At OH Health + Pharmacy, our mission is to provide exceptional, patient-centered care. We believe in building lasting relationships within our community, offering not just treatments but also trusted advice and support for your health journey. Our dedicated team is here to ensure you receive the professional and compassionate service you deserve.</p>
+              <p className="text-[#617589] dark:text-[#a0aec0]  text-base leading-relaxed">At OH Health + Pharmacy, our mission is to provide exceptional, patient-centered care. We believe in building lasting relationships within our community, offering not just treatments but also trusted advice and support for your health journey. We are here to ensure you receive the professional and compassionate service you deserve.</p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/Services">
                   <button

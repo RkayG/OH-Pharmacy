@@ -17,7 +17,7 @@ export default function ServiceGrid({ services, showBooking = true }: ServiceGri
   }
 
   return (
-    <div className="grid gap-6 md:grid-cols-3 lg:gap-8">
+    <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3  lg:gap-8">
       {services.map((service) => (
         <div
           key={service.id}

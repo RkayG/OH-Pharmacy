@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
+import { Suspense } from 'react';
 import Hero from '@/components/ui/Hero';
-import ServiceGrid from '@/components/services/ServiceGrid';
-import { services, type Service } from '@/lib/services';
+import BookingForm from '@/components/book/BookingForm';
 
 export const metadata: Metadata = {
   title: 'Book Services Online - OH Health + Pharmacy',
@@ -9,40 +9,22 @@ export const metadata: Metadata = {
 };
 
 export default function BookServicesPage() {
-  // Filter only bookable services (those with booking URLs or specific categories)
-  const bookableCategories: Array<Exclude<Service['category'], 'general'>> = [
-    'travel',
-    'vaccination',
-    'weight-loss',
-  ];
-
-  const bookableServices = services.filter(service => 
-    Boolean(service.bookingUrl) || bookableCategories.includes(service.category)
-  );
-
   return (
     <>
       <Hero
-        title="Book Our Services Online"
-        subtitle="24/7 Online Booking"
-        description="Book expert healthcare services from the comfort of your home. Simply visit our website and book the service you require in minutes."
+        title="Book Your Appointment"
+        description="Fill out the form below to request a booking. We'll get back to you to confirm your appointment."
       />
 
-      <section className="py-16 bg-white-off">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-text-dark mb-4">
-              Available Services
-            </h2>
-            <p className="text-text-light text-lg max-w-2xl mx-auto">
-              Select a service below to view details and book your appointment online.
-            </p>
+          <div className="max-w-3xl mx-auto">
+            <Suspense fallback={<div className="bg-white rounded-xl border border-primary p-8 md:p-12">Loading booking form...</div>}>
+              <BookingForm />
+            </Suspense>
           </div>
-
-          <ServiceGrid services={bookableServices} showBooking={true} />
         </div>
       </section>
     </>
   );
 }
-
