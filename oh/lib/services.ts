@@ -719,6 +719,10 @@ export const getServicesByCategory = (category: Service['category']): Service[] 
   return services.filter(service => service.category === category);
 };
 
+export function getAllServices() {
+  return services;
+};
+
 export const getFeaturedServices = (): Service[] => {
   return services.filter(service => 
     ['vitamin-b12', 'travel-clinic', 'weight-loss', 'earwax-removal', 'eye-care', 'private-health-checks'].includes(service.id)

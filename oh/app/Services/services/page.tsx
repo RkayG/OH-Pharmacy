@@ -2,15 +2,25 @@ import { Metadata } from 'next';
 import Hero from '@/components/ui/Hero';
 import ServiceList from '@/components/services/ServiceList';
 import { services } from '@/lib/services';
+import Breadcrumb from '@/components/ui/Breadcrumb';
 
 export const metadata: Metadata = {
   title: 'All Services - OH Health + Pharmacy',
-  description: 'Find out more about our range of private services. We offer access to expert healthcare services in Canterbury.',
+  description:
+    'Find out more about our range of private services. We offer access to expert healthcare services in Canterbury.',
 };
 
 export default function AllServicesPage() {
+  const breadcrumbItems = [
+    { label: 'Home', href: '/' },
+    { label: 'Services', href: '/Services' },
+    { label: 'All Services' },
+  ];
+
   return (
     <>
+      <Breadcrumb items={breadcrumbItems} />
+
       <Hero
         title="All Services"
         description="Browse our complete range of private services. We offer access to expert healthcare services in Canterbury."
@@ -25,4 +35,3 @@ export default function AllServicesPage() {
     </>
   );
 }
-
