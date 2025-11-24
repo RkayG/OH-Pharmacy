@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { Feature72 } from '@/components/ui/feature-72';
 import { HeroSection } from '@/components/ui/hero-section-2';
+import Map from '@/components/map';
 
 export default function Home() {
   return (
@@ -183,12 +184,8 @@ export default function Home() {
               </form>
             </div>
             <div className="lg:w-1/2">
-              <div
-                className="w-full h-full min-h-[400px] bg-center bg-no-repeat bg-cover rounded-lg"
-                style={{
-                  backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCLvonob97GoHHlkoS2hT3g639U7Ufd0rFkBR2kJf74q6Sbex2-uVJogb66U3SsjCrKTLCLWcp3YBdlBAj5myYG-F3q4Xx4aNHeZ9JGbyMTx7vgfCai_UADX_lquOgryrZLOOU4qeAVPGt-yc0rLstZq6DEHCSRQjn5aPpa99rcms2I1wp3E_qiXhfr8YVD2mDN3WeqeoTi8eIQWAWaXggNFkcEvtXhDdF7RnF_7s7pl89JtHcGPBGSWuF7ds2QfxMY8ncqDjQQd7Ec")'
-                }}
-              />
+              <Map />
+
             </div>
           </div>
         </div>

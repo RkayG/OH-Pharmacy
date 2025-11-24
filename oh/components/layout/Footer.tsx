@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaPhone, FaMapMarkerAlt, FaFacebook, FaInstagram, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin, FaMapMarkerAlt } from 'react-icons/fa';
 
 export default function Footer() {
   return (
@@ -114,7 +114,7 @@ export default function Footer() {
             <h4 className="font-semibold mb-4 text-white">Contact</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <FaMapMarkerAlt className="text-[#005A5B] mt-1 flex-shrink-0" size={18} />
+                <FaMapMarkerAlt className="text-white mt-1 flex-shrink-0" size={18} />
                 <span className="text-gray-300 text-sm leading-relaxed">
                   OH Health + Pharmacy<br />
                   6 - 8 Longmarket<br />
