@@ -119,23 +119,12 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
                     Book your appointment online today
                   </p>
                 </div>
-                {service.bookingUrl ? (
-                  <a
-                    href={service.bookingUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 rounded-md px-8 bg-primary text-primary-foreground hover:bg-primary/90"
-                  >
-                    Book Online
-                  </a>
-                ) : (
-                  <Link
-                    href={`/book-services?service=${service.id}`}
-                    className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 rounded-md px-8 bg-primary text-primary-foreground hover:bg-primary/90"
-                  >
-                    Book Appointment
-                  </Link>
-                )}
+                <Link
+                  href={`/book-services?service=${service.id}`}
+                  className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 rounded-md px-8 bg-primary text-primary-foreground hover:bg-primary/90"
+                >
+                  Book Appointment
+                </Link>
               </div>
             </div>
 
