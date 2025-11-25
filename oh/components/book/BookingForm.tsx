@@ -3,15 +3,18 @@
 import { services } from '@/lib/services';
 import { useState, useMemo, useEffect, useRef } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { FaSearch, FaCheck } from 'react-icons/fa';
+import { FaSearch } from 'react-icons/fa';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 export default function BookingForm() {
   const searchParams = useSearchParams();
   const [selectedService, setSelectedService] = useState<string>('');
   const [serviceSearch, setServiceSearch] = useState('');
   const [showServiceDropdown, setShowServiceDropdown] = useState(false);
-  const [selectedDays, setSelectedDays] = useState<string[]>([]);
-  const [preferredTimeOfDay, setPreferredTimeOfDay] = useState<string[]>([]);
+  const [selectedDate, setSelectedDate] = useState<string>('');
+  const [selectedDateObj, setSelectedDateObj] = useState<Date | null>(null);
+  const [selectedTime, setSelectedTime] = useState<string>('');
   const [preferredContact, setPreferredContact] = useState<string>('');
   const [formData, setFormData] = useState({
     name: '',
@@ -20,10 +23,52 @@ export default function BookingForm() {
     message: '',
   });
   const [phoneError, setPhoneError] = useState<string>('');
+  const [dateError, setDateError] = useState<string>('');
 
-  const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-  const timeOfDayOptions = ['Morning', 'Afternoon', 'Evening'];
   const contactMethods = ['Email', 'Phone', 'Either'];
+  
+  // Generate time slots (9 AM to 5 PM, every 30 minutes)
+  const timeSlots = useMemo(() => {
+    const slots: string[] = [];
+    for (let hour = 9; hour < 17; hour++) {
+      for (let minute = 0; minute < 60; minute += 30) {
+        const timeString = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
+        const displayTime = `${hour}:${minute.toString().padStart(2, '0')} ${hour >= 12 ? 'PM' : 'AM'}`;
+        slots.push(timeString);
+      }
+    }
+    return slots;
+  }, []);
+
+  // Get minimum date (today)
+  const getMinDate = () => {
+    const today = new Date();
+    return today.toISOString().split('T')[0];
+  };
+
+  // Check if a date is Sunday (Sunday = 0)
+  const isSunday = (date: Date): boolean => {
+    const dayOfWeek = date.getDay();
+    return dayOfWeek === 0; // Sunday
+  };
+
+  // Filter Sundays from date picker (allow Monday to Saturday)
+  const filterSundays = (date: Date): boolean => {
+    return !isSunday(date);
+  };
+
+  // Handle date change from DatePicker
+  const handleDateChange = (date: Date | null) => {
+    if (date) {
+      const dateString = date.toISOString().split('T')[0];
+      setSelectedDateObj(date);
+      setSelectedDate(dateString);
+      setDateError('');
+    } else {
+      setSelectedDateObj(null);
+      setSelectedDate('');
+    }
+  };
 
   // Pre-select service from query parameter
   useEffect(() => {
@@ -62,20 +107,12 @@ export default function BookingForm() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const handleDayToggle = (day: string) => {
-    setSelectedDays(prev =>
-      prev.includes(day)
-        ? prev.filter(d => d !== day)
-        : [...prev, day]
-    );
-  };
-
-  const handleTimeToggle = (time: string) => {
-    setPreferredTimeOfDay(prev =>
-      prev.includes(time)
-        ? prev.filter(t => t !== time)
-        : [...prev, time]
-    );
+  const formatTimeForDisplay = (time: string): string => {
+    const [hours, minutes] = time.split(':');
+    const hour = parseInt(hours);
+    const ampm = hour >= 12 ? 'PM' : 'AM';
+    const displayHour = hour > 12 ? hour - 12 : (hour === 0 ? 12 : hour);
+    return `${displayHour}:${minutes} ${ampm}`;
   };
 
   const formatPhoneNumber = (value: string): string => {
@@ -160,11 +197,23 @@ export default function BookingForm() {
       return;
     }
     
+    // Validate date and time are selected
+    if (!selectedDate || !selectedTime) {
+      alert('Please select both a date and time for your appointment.');
+      return;
+    }
+    
+    // Double-check that selected date is not a Sunday
+    if (selectedDateObj && isSunday(selectedDateObj)) {
+      setDateError('We are closed on Sundays. Please select a date from Monday to Saturday.');
+      return;
+    }
+    
     // Handle form submission here
     console.log({
       service: selectedServiceData,
-      availability: selectedDays,
-      preferredTimeOfDay,
+      appointmentDate: selectedDate,
+      appointmentTime: selectedTime,
       preferredContact,
       ...formData,
     });
@@ -230,62 +279,53 @@ export default function BookingForm() {
           )}
         </div>
 
-        {/* Availability Days */}
+        {/* Appointment Date */}
         <div>
-          <label className="block text-sm font-semibold text-[#111418] mb-3">
-            Your Typical Availability <span className="text-red-500">*</span>
+          <label className="block text-sm font-semibold text-[#111418] mb-2">
+            Preferred Appointment Date <span className="text-red-500">*</span>
           </label>
           <p className="text-sm text-[#617589] mb-3">
-            Select all days you are typically available (you're not selecting a specific date)
+            Select your preferred date for the appointment (Monday-Saturday only)
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-            {daysOfWeek.map((day) => (
-              <button
-                key={day}
-                type="button"
-                onClick={() => handleDayToggle(day)}
-                className={`flex items-center justify-center px-4 py-3 rounded-lg border-2 transition-colors ${
-                  selectedDays.includes(day)
-                    ? 'bg-primary text-white border-primary'
-                    : 'bg-white text-[#111418] border-gray-300 hover:border-primary/50'
-                }`}
-              >
-                {selectedDays.includes(day) && (
-                  <FaCheck className="mr-2" />
-                )}
-                {day}
-              </button>
-            ))}
-          </div>
+          <DatePicker
+            selected={selectedDateObj}
+            onChange={handleDateChange}
+            filterDate={filterSundays}
+            minDate={new Date()}
+            dateFormat="dd/MM/yyyy"
+            placeholderText="Select a date (Monday-Saturday)"
+            className={`w-full px-4 py-3 border rounded-lg bg-[#f4f7f6] focus:ring-2 focus:ring-primary focus:outline-none ${
+              dateError ? 'border-red-500' : 'border-gray-300'
+            }`}
+            required
+            wrapperClassName="w-full"
+          />
+          {dateError && (
+            <p className="mt-2 text-sm text-red-500">{dateError}</p>
+          )}
         </div>
 
-        {/* Preferred Time of Day */}
+        {/* Appointment Time */}
         <div>
-          <label className="block text-sm font-semibold text-[#111418] mb-3">
-            Preferred Time of Day <span className="text-red-500">*</span>
+          <label className="block text-sm font-semibold text-[#111418] mb-2">
+            Preferred Appointment Time <span className="text-red-500">*</span>
           </label>
           <p className="text-sm text-[#617589] mb-3">
-            Select all time periods you prefer for appointments
+            Select your preferred time for the appointment
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-            {timeOfDayOptions.map((time) => (
-              <button
-                key={time}
-                type="button"
-                onClick={() => handleTimeToggle(time)}
-                className={`flex items-center justify-center px-4 py-3 rounded-lg border-2 transition-colors ${
-                  preferredTimeOfDay.includes(time)
-                    ? 'bg-primary text-white border-primary'
-                    : 'bg-white text-[#111418] border-gray-300 hover:border-primary/50'
-                }`}
-              >
-                {preferredTimeOfDay.includes(time) && (
-                  <FaCheck className="mr-2" />
-                )}
-                {time}
-              </button>
+          <select
+            value={selectedTime}
+            onChange={(e) => setSelectedTime(e.target.value)}
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-[#f4f7f6] focus:ring-2 focus:ring-primary focus:outline-none"
+            required
+          >
+            <option value="">Select a time</option>
+            {timeSlots.map((time) => (
+              <option key={time} value={time}>
+                {formatTimeForDisplay(time)}
+              </option>
             ))}
-          </div>
+          </select>
         </div>
 
         {/* Preferred Contact Method */}
