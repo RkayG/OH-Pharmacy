@@ -42,16 +42,14 @@ export default function ServiceGrid({ services, showBooking = true }: ServiceGri
                 From {service.price}
               </p>
             )}
-            {showBooking && service.bookingUrl ? (
-              <a
-                href={service.bookingUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+            {showBooking ? (
+              <Link
+                href={`/book-services?service=${service.id}`}
                 className="group inline-flex items-center justify-center rounded-full bg-primary text-white font-semibold hover:bg-primary/90 transition-colors mt-auto px-6 py-3 text-sm md:text-base"
               >
-                Book Online
+                Book Appointment
                 <ArrowRight className="ml-2 size-4 transition-transform group-hover:translate-x-1" />
-              </a>
+              </Link>
             ) : (
               <Link
                 href={service.slug}
