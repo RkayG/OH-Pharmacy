@@ -5,22 +5,105 @@ import { getServicesByCategory, getAllServices, Service } from '@/lib/services';
 import { notFound } from 'next/navigation';
 import Breadcrumb from '@/components/ui/Breadcrumb';
 
-// Category definitions
-const categoryMap: Record<string, { label: string; description: string }> = {
-  all: { label: "All Services", description: "Browse all available services we offer." },
-  clinical: { label: "Clinical & Health Services", description: "Comprehensive health assessments, blood pressure checks, cholesterol testing, and more." },
-  vaccination: { label: "Vaccinations & Immunisation", description: "Flu vaccinations, travel vaccines, and routine immunisations." },
-  travel: { label: "Travel Health Services", description: "Expert travel health consultations, antimalarials, and travel vaccination certificates." },
-  prescribing: { label: "Private Prescribing & Consultations", description: "Pharmacist prescriber consultations for UTIs, ear infections, skin conditions, and more." },
-  medication: { label: "Medication-Related Services", description: "Private prescriptions, repeat prescription collection, and emergency medication supply." },
-  children: { label: "Children & Family Services", description: "Childhood vaccinations, head lice treatment, and newborn health support." },
-  testing: { label: "Testing & Screening Services", description: "STD/STI testing, blood tests, hormone testing, and comprehensive health screening." },
-  "womens-health": { label: "Women’s Health Services", description: "Contraception, UTI treatment, menopause consultations, and pregnancy testing." },
-  lifestyle: { label: "Lifestyle & Wellness Services", description: "Smoking cessation, vitamin B12 injections, earwax removal, and healthy lifestyle coaching." },
-  "weight-loss": { label: "Weight Loss Services", description: "Injectable weight loss programmes with expert support and regular check-ins." },
-  certificates: { label: "Certificates & Workplace Services", description: "Fit-to-fly certificates, occupational health vaccinations, and workplace medicals." },
-  additional: { label: "Additional Services", description: "Needle disposal, mobility aids, eye care, and other essential pharmacy services." },
+// Define a type for all possible categories
+export type CategoryKey =
+  | "all"
+  | "clinical"
+  | "vaccination"
+  | "travel"
+  | "prescribing"
+  | "medication"
+  | "children"
+  | "testing"
+  | "womens-health"
+  | "lifestyle"
+  | "weight-loss"
+  | "certificates"
+  | "additional";
+
+export const categoryMap: Record<
+  CategoryKey,
+  { label: string; description: string; image: string }
+> = {
+  all: {
+    label: "All Services",
+    description: "Browse all available services we offer.",
+    image: "/images/all.jpg",
+  },
+  clinical: {
+    label: "Clinical & Health Services",
+    description:
+      "Comprehensive health assessments, blood pressure checks, cholesterol testing, and more.",
+    image: "/images/doctor.jpg",
+  },
+  vaccination: {
+    label: "Vaccinations & Immunisation",
+    description: "Flu vaccinations, travel vaccines, and routine immunisations.",
+    image: "/images/flu.jpg",
+  },
+  travel: {
+    label: "Travel Health Services",
+    description:
+      "Expert travel health consultations, antimalarials, and travel vaccination certificates.",
+    image: "/images/travel.jpg",
+  },
+  prescribing: {
+    label: "Private Prescribing & Consultations",
+    description:
+      "Pharmacist prescriber consultations for UTIs, ear infections, skin conditions, and more.",
+    image: "/images/private.jpg",
+  },
+  medication: {
+    label: "Medication-Related Services",
+    description:
+      "Private prescriptions, repeat prescription collection, and emergency medication supply.",
+    image: "/images/medication.jpg",
+  },
+  children: {
+    label: "Children & Family Services",
+    description:
+      "Childhood vaccinations, head lice treatment, and newborn health support.",
+    image: "/images/children.jpg",
+  },
+  testing: {
+    label: "Testing & Screening Services",
+    description:
+      "STD/STI testing, blood tests, hormone testing, and comprehensive health screening.",
+    image: "/images/hepatitis.jpg",
+  },
+  "womens-health": {
+    label: "Women’s Health Services",
+    description:
+      "Contraception, UTI treatment, menopause consultations, and pregnancy testing.",
+    image: "/images/women.jpg",
+  },
+  lifestyle: {
+    label: "Lifestyle & Wellness Services",
+    description:
+      "Smoking cessation, vitamin B12 injections, earwax removal, and healthy lifestyle coaching.",
+    image: "/images/healthy.jpg",
+  },
+  "weight-loss": {
+    label: "Weight Loss Services",
+    description:
+      "Injectable weight loss programmes with expert support and regular check-ins.",
+    image: "/images/weight-loss.jpg",
+  },
+  certificates: {
+    label: "Certificates & Workplace Services",
+    description:
+      "Fit-to-fly certificates, occupational health vaccinations, and workplace medicals.",
+    image: "/images/cert.jpg",
+  },
+  additional: {
+    label: "Additional Services",
+    description:
+      "Needle disposal, mobility aids, eye care, and other essential pharmacy services.",
+    image: "/images/additional.jpg",
+  },
 };
+
+
 
 interface CategoryPageProps {
   params: Promise<{ category: string }>; // <-- must be a Promise
@@ -34,7 +117,7 @@ export async function generateStaticParams() {
 // Metadata per category
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
   const { category } = await params; // <-- unwrap the promise
-  const categoryInfo = categoryMap[category];
+  const categoryInfo = categoryMap[category as CategoryKey];
   if (!categoryInfo) return { title: 'Category Not Found - OH Health + Pharmacy' };
   return { title: `${categoryInfo.label} - OH Health + Pharmacy`, description: categoryInfo.description };
 }
@@ -42,7 +125,7 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
 // Page component
 export default async function CategoryPage({ params }: CategoryPageProps) {
   const { category } = await params; 
-  const categoryInfo = categoryMap[category];
+  const categoryInfo = categoryMap[category as CategoryKey];
 
   if (!categoryInfo) notFound(); 
 
@@ -60,7 +143,12 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   return (
     <>
       <Breadcrumb items={breadcrumbs} />
-      <Hero title={categoryInfo.label} description={categoryInfo.description} />
+      <Hero 
+        title={categoryInfo.label}
+        description={categoryInfo.description}
+        image={categoryInfo.image}
+      />
+
 
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
