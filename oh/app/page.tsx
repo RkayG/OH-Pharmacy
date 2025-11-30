@@ -10,7 +10,7 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection
         logo={{
-          url: "",
+          url: "/images/oh-logo.png",
           alt: "OH Health + Pharmacy Logo",
           text: "Welcome to OH Health + Pharmacy"
         }}

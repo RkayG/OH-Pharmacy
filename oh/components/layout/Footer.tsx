@@ -3,13 +3,17 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaMapMarkerAlt } from 'react-icons
 
 export default function Footer() {
   return (
-    <footer className="bg-[#005A5B] dark:bg-[#101922] text-white mt-16 border-t border-gray-700">
+    <footer className="bg-[#005A5A] dark:bg-[#101922] text-white mt-16 border-t border-gray-700">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* About */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
-              <h3 className="text-xl font-bold text-white">OH Health + Pharmacy</h3>
+            <div className="flex items-center gap-3 mb-4 text-white">
+               <img 
+                src="/images/oh-logo.png" 
+                alt="OH Pharmacy Logo"
+                className="h-10 w-auto grayscale brightness-175" 
+              />
             </div>
             <p className="text-gray-300 mb-6 text-sm leading-relaxed">
               Your trusted partner in health and wellness. Providing expert care and private services to the Kent community.
