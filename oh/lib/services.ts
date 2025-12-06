@@ -13,15 +13,17 @@ export interface Service {
 
 export const services: Service[] = [
   // 🩺 Clinical & Health Services
-  {
-    id: 'blood-pressure-checks',
-    title: 'Blood Pressure Checks',
-    slug: '/Services/blood-pressure-checks',
-    category: 'clinical',
-    description: 'Regular blood pressure monitoring to help manage your cardiovascular health.',
-    fullDescription: 'Our blood pressure checking service helps you monitor your cardiovascular health. Regular checks can help detect hypertension early and manage your heart health effectively.',
-    image: '/images/pressurecheck.jpg',
-  },
+{
+  id: 'blood-pressure-checks',
+  title: 'Blood Pressure Checks',
+  slug: '/Services/blood-pressure-checks',
+  category: 'clinical',
+  description: 'Regular blood pressure monitoring to help manage your cardiovascular health.',
+  fullDescription:
+    'Our blood pressure checking service helps you monitor your cardiovascular health. Regular checks can help detect hypertension early and manage your heart health effectively.',
+  image: 'https://images.unsplash.com/photo-1615486511484-92e172cc4fe0?q=80&w=500&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+},
+
   {
     id: 'cholesterol-testing',
     title: 'Cholesterol Testing',
@@ -29,7 +31,7 @@ export const services: Service[] = [
     category: 'clinical',
     description: 'Cholesterol level testing to assess your heart health and cardiovascular risk.',
     fullDescription: 'Get your cholesterol levels checked to assess your cardiovascular health. Our testing service helps identify risk factors and provides expert advice on managing your cholesterol levels.',
-    image: '/images/cholesterol-testing.jpg' ,
+    image: 'https://images.unsplash.com/photo-1752842350772-2921657e50d7?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' ,
   },
   {
     id: 'blood-glucose-screening',
@@ -38,7 +40,7 @@ export const services: Service[] = [
     category: 'clinical',
     description: 'Blood glucose testing and diabetes screening to monitor your blood sugar levels.',
     fullDescription: 'Regular blood glucose screening helps detect diabetes early and monitor existing conditions. Our service provides accurate testing with expert interpretation and advice.',
-    image: '/images/glucose-testing.jpg',
+    image: 'https://plus.unsplash.com/premium_photo-1702599120667-d86c2eb51ada?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
     id: 'hba1c-testing',
@@ -72,7 +74,7 @@ export const services: Service[] = [
       'Personalized health reports',
       'Expert pharmacist consultations',
     ],
-    image: '/images/health-assessmt.jpg',
+    image: 'https://images.unsplash.com/photo-1758691462123-8a17ae95d203?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGVhbHRoJTIwYXNzZXNzbWVudHxlbnwwfHwwfHx8MA%3D%3D',
   },
   {
   id: 'blood-test',
@@ -81,7 +83,7 @@ export const services: Service[] = [
   category: 'testing',
   description: 'Private blood testing for general health, diagnostics, and screening.',
   fullDescription: 'We offer a wide range of private blood tests including Full Blood Count (FBC), liver function, kidney function, hormone panels, and general health checks. Fast and confidential results.',
-  image: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=400&h=300&fit=crop',
+  image: 'https://images.unsplash.com/photo-1714642596931-2293df25c4a3?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhbHRoJTIwYXNzZXNzbWVudHxlbnwwfHwwfHx8MA%3D%3D',
   features: [
     'Full Blood Count (FBC)',
     'Liver & Kidney Function Tests',
@@ -99,7 +101,7 @@ export const services: Service[] = [
     category: 'vaccination',
     description: 'Flu vaccination available privately or through NHS services.',
     fullDescription: 'Protect yourself from seasonal flu with our flu vaccination service. Available privately or through NHS services, our trained staff provide safe and efficient vaccinations.',
-    image: '/images/flu.jpg',
+    image: 'https://images.unsplash.com/photo-1691139600731-7232eaa980c3?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zmx1JTIwdmFjY2luYXRpb258ZW58MHx8MHx8fDA%3D',
   },
   {
     id: 'yellow-fever-vaccine',
@@ -108,7 +110,7 @@ export const services: Service[] = [
     category: 'vaccination',
     description: 'Yellow fever vaccination for travel to certain countries.',
     fullDescription: 'Yellow fever vaccination is required for travel to many countries in Africa and South America. Book your appointment to get protected.',
-    image: '/images/yellow.jpg',
+    image: 'https://plus.unsplash.com/premium_photo-1661719866307-c47f83c1d6ca?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
     id: 'hepatitis-a',
@@ -117,7 +119,7 @@ export const services: Service[] = [
     category: 'vaccination',
     description: 'Hepatitis A vaccination for travel protection.',
     fullDescription: 'Hepatitis A vaccination protects against hepatitis A virus, commonly recommended for travel to certain destinations.',
-    image: '/images/hepatitis.jpg',
+    image: 'https://media.istockphoto.com/id/1130140769/photo/hepatits-a-vaccine-in-a-glass-vial.webp?a=1&b=1&s=612x612&w=0&k=20&c=5m43nR6VPO7UGhCDlH_3zfDkhz4ns8y-Jiesx-vQcL4=',
   },
   {
     id: 'hepatitis-b',
@@ -126,7 +128,7 @@ export const services: Service[] = [
     category: 'vaccination',
     description: 'Hepatitis B vaccination for protection against hepatitis B virus.',
     fullDescription: 'Hepatitis B vaccination provides protection against the hepatitis B virus, recommended for travel and occupational health.',
-    image: '/images/hepatitis-b.jpg',
+    image: 'https://media.istockphoto.com/id/954825080/photo/hepatitis-b-immunization.webp?a=1&b=1&s=612x612&w=0&k=20&c=sr07zfZImbn572r4DcHw9mJTviC2QuCBQ5Mga3rTQZ8=',
   },
   {
     id: 'typhoid',
@@ -135,7 +137,7 @@ export const services: Service[] = [
     category: 'vaccination',
     description: 'Typhoid vaccination for travel protection.',
     fullDescription: 'Typhoid vaccination is recommended for travel to areas where typhoid fever is common, particularly parts of Asia, Africa, and South America.',
-    image: '/images/typhoid.jpg',
+    image: 'https://images.unsplash.com/photo-1668874896975-7f874c90600a?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHR5cGhvaWQlMjB2YWNjaW5lfGVufDB8fDB8fHww',
   },
   {
     id: 'chickenpox-vaccine',
@@ -144,7 +146,7 @@ export const services: Service[] = [
     category: 'vaccination',
     description: 'Chickenpox vaccination for children and adults who haven\'t had chickenpox.',
     fullDescription: 'Chickenpox vaccination is available for children and adults who haven\'t had chickenpox. Protect yourself and your family from this common childhood illness.',
-    image: '/images/chicken-pox.jpg',
+    image: 'https://images.unsplash.com/photo-1606619353143-8e11b4bdf76b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNoaWNrZW5wb3glMjB2YWNjaW5lfGVufDB8fDB8fHww',
   },
   {
     id: 'hpv',
@@ -153,7 +155,7 @@ export const services: Service[] = [
     category: 'vaccination',
     description: 'Human Papillomavirus (HPV) vaccination to protect against HPV-related cancers.',
     fullDescription: 'HPV vaccination protects against human papillomavirus, which can cause cervical cancer and other cancers. Available for both males and females.',
-    image: '/images/hpv.jpg',
+    image: 'https://plus.unsplash.com/premium_photo-1661594551472-826bdbdb09a5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aHB2JTIwdmFjY2luZXxlbnwwfHwwfHx8MA%3D%3D',
   },
   {
     id: 'shingles',
@@ -162,7 +164,7 @@ export const services: Service[] = [
     category: 'vaccination',
     description: 'Shingles (Herpes Zoster) vaccination to prevent shingles and its complications.',
     fullDescription: 'Shingles vaccination helps prevent shingles and its complications, particularly recommended for older adults who are at higher risk.',
-    image: '/images/hepatitis.jpg',
+    image: 'https://plus.unsplash.com/premium_photo-1661769644240-da282f078bc1?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aHB2JTIwdmFjY2luZXxlbnwwfHwwfHx8MA%3D%3D',
   },
   {
     id: 'mmr-private',
@@ -171,7 +173,7 @@ export const services: Service[] = [
     category: 'vaccination',
     description: 'Private MMR (Measles, Mumps, Rubella) vaccination.',
     fullDescription: 'MMR vaccination protects against measles, mumps, and rubella. Available privately for those who need it.',
-    image: '/images/hepatitis-b.jpg',
+    image: 'https://plus.unsplash.com/premium_photo-1668487826892-bf471b01e5ed?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW1yJTIwdmFjY2luZXxlbnwwfHwwfHx8MA%3D%3D',
   },
   {
     id: 'meningitis-acwy',
@@ -181,7 +183,7 @@ export const services: Service[] = [
     description: 'Meningitis ACWY vaccination for travel, including Hajj and Umrah.',
     fullDescription: 'Meningitis ACWY vaccination is required for travel to certain regions and for Hajj and Umrah pilgrimages. Get your vaccination and certificate.',
     bookingUrl: 'https://www.treatlocal.co.uk/online-booking/sidcup/hajj-umrah-vaccine/appointment',
-    image: '/images/flu.jpg',
+    image: 'https://images.unsplash.com/photo-1576765608622-067973a79f53?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1lbmluZ2ludGlzJTIwdmFjY2luZXxlbnwwfHwwfHx8MA%3D%3D',
   },
   {
     id: 'covid-vaccination',
@@ -190,7 +192,7 @@ export const services: Service[] = [
     category: 'vaccination',
     description: 'Private COVID-19 vaccination service where available.',
     fullDescription: 'Private COVID-19 vaccination service available at our pharmacy. Stay protected against COVID-19 with our vaccination service.',
-    image: '/images/covid.jpg',
+    image: 'https://images.unsplash.com/photo-1608326389417-d3f9cc46de04?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG1lbmluZ2ludGlzJTIwdmFjY2luZXxlbnwwfHwwfHx8MA%3D%3D',
   },
 
   // 🌍 Travel Health Services
@@ -207,7 +209,7 @@ export const services: Service[] = [
       'Friendly and efficient service',
     ],
     bookingUrl: 'https://www.treatlocal.co.uk/online-booking/sidcup/travel-vaccine/appointment',
-    image: '/images/doctor.jpg',
+    image: 'https://images.unsplash.com/photo-1758691461957-474a7686e388?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1lZGljYWwlMjBjb25zdWx0YXRpb258ZW58MHx8MHx8fDA%3D',
   },
   {
     id: 'antimalarials',
@@ -216,7 +218,7 @@ export const services: Service[] = [
     category: 'travel',
     description: 'Antimalarial medication for travel protection against malaria.',
     fullDescription: 'Expert advice and antimalarial medication for your travel needs. Our pharmacists can recommend the right antimalarial medication based on your destination and travel plans.',
-    image: '/images/medication.jpg',
+    image: 'https://images.unsplash.com/photo-1628771065518-0d82f1938462?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWVkaWNhdGlvbnxlbnwwfHwwfHx8MA%3D%3D',
   },
   {
     id: 'travel-vaccination-certificates',
@@ -225,7 +227,7 @@ export const services: Service[] = [
     category: 'travel',
     description: 'Official travel vaccination certificates for your travel documentation.',
     fullDescription: 'Get official travel vaccination certificates for countries that require proof of vaccination. We provide proper documentation for all travel vaccinations.',
-    image: '/images/chicken-pox.jpg',
+    image: 'https://images.unsplash.com/photo-1615631648086-325025c9e51e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dmFjY2luYXRpb258ZW58MHx8MHx8fDA%3D',
   },
   {
     id: 'travel-health-packs',
@@ -234,7 +236,7 @@ export const services: Service[] = [
     category: 'travel',
     description: 'Comprehensive travel health packs and expert travel health advice.',
     fullDescription: 'Get prepared for your trip with our travel health packs containing essential medications and supplies. Our expert pharmacists provide personalized travel health advice.',
-    image: '/images/travel.jpg',
+    image: 'https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D',
   },
 
   // 📄 Private Prescribing & Consultations
@@ -245,7 +247,7 @@ export const services: Service[] = [
     category: 'prescribing',
     description: 'Private GP-style consultations for various health conditions.',
     fullDescription: 'Access private GP-style consultations at our pharmacy. Our qualified prescribers can assess and treat a range of common health conditions.',
-    image: '/images/private.jpg',
+    image: 'https://images.unsplash.com/photo-1758273240403-052b3c99f636?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJpdmF0ZSUyMGNvbnN1bHRhdGlvbnxlbnwwfHwwfHx8MA%3D%3D',
   },
   {
     id: 'uti-treatment',
@@ -254,7 +256,7 @@ export const services: Service[] = [
     category: 'prescribing',
     description: 'Expert assessment and treatment for urinary tract infections.',
     fullDescription: 'Get fast and effective treatment for urinary tract infections through our pharmacist prescriber service. Quick assessment and appropriate treatment available.',
-    image: '/images/uti.jpg',
+    image: 'https://images.unsplash.com/photo-1637000289497-f5d424b696a6?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHVyaW5lfGVufDB8fDB8fHww',
   },
   {
     id: 'ear-infections',
@@ -263,7 +265,7 @@ export const services: Service[] = [
     category: 'prescribing',
     description: 'Assessment and treatment for ear infections.',
     fullDescription: 'Expert assessment and treatment for ear infections. Our pharmacist prescribers can diagnose and provide appropriate treatment for ear infections.',
-    image: '/images/ear-infection.jpg',
+    image: 'https://plus.unsplash.com/premium_photo-1661779725491-e997e70928fc?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGVhciUyMGluZmVjdGlvbnxlbnwwfHwwfHx8MA%3D%3D',
   },
   {
     id: 'sore-throat-assessment',
@@ -272,7 +274,7 @@ export const services: Service[] = [
     category: 'prescribing',
     description: 'Professional assessment and treatment for sore throats.',
     fullDescription: 'Get expert assessment and treatment for sore throats. Our pharmacists can determine if antibiotics are needed or provide advice on symptom relief.',
-    image: '/images/sore-throat.jpg',
+    image: 'https://plus.unsplash.com/premium_photo-1661779425660-33e91cce9dd4?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c29yZSUyMHRocm9hdHxlbnwwfHwwfHx8MA%3D%3D',
   },
   {
     id: 'skin-conditions',
@@ -281,7 +283,7 @@ export const services: Service[] = [
     category: 'prescribing',
     description: 'Expert consultation and treatment for skin conditions including eczema, acne, and psoriasis.',
     fullDescription: 'Get expert advice and treatment for skin conditions including eczema, acne, and psoriasis. Our pharmacist prescribers can assess your condition and provide appropriate treatment.',
-    image: '/images/skin-condition.jpg',
+    image: 'https://images.unsplash.com/photo-1730288951113-9cc087c14b83?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2tpbiUyMGNvbmRpdGlvbnxlbnwwfHwwfHx8MA%3D%3D',
   },
   {
     id: 'contraception',
@@ -290,7 +292,7 @@ export const services: Service[] = [
     category: 'prescribing',
     description: 'Comprehensive contraception services including pill, patch, and injection options.',
     fullDescription: 'Access expert contraception services including the pill, patch, and injection. Our pharmacist prescribers can help you find the right contraceptive method for your needs.',
-    image: '/images/contraception.jpg',
+    image: 'https://images.unsplash.com/photo-1522422263604-6c2ac26bfdf7?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGNvbnRyYWNlcHRpb258ZW58MHx8MHx8fDA%3D',
   },
   {
     id: 'erectile-dysfunction',
@@ -299,7 +301,7 @@ export const services: Service[] = [
     category: 'prescribing',
     description: 'Private treatment and consultation for erectile dysfunction.',
     fullDescription: 'Expert treatment and advice for erectile dysfunction. Our pharmacist prescribers provide confidential consultations and appropriate treatment options.',
-    image: '/images/dysfunction.jpg',
+    image: 'https://images.unsplash.com/photo-1580281657527-47f249e8f4df?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGhhcm1hY3l8ZW58MHx8MHx8fDA%3D',
   },
   {
     id: 'asthma-inhaler-refills',
@@ -308,7 +310,7 @@ export const services: Service[] = [
     category: 'prescribing',
     description: 'Private asthma inhaler refills and asthma management support.',
     fullDescription: 'Get private asthma inhaler refills and expert advice on asthma management. Our pharmacists can help ensure you have the right inhaler and technique.',
-    image: '/images/inhaler.jpg',
+    image: 'https://images.unsplash.com/photo-1637930030080-4ec4b95914c0?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aW5oYWxlcnxlbnwwfHwwfHx8MA%3D%3D',
   },
   {
     id: 'migraine-treatment',
@@ -317,7 +319,7 @@ export const services: Service[] = [
     category: 'prescribing',
     description: 'Expert assessment and treatment for migraines.',
     fullDescription: 'Get expert assessment and treatment for migraines. Our pharmacist prescribers can provide appropriate medication and advice on managing migraines.',
-    image: '/images/migraine.jpg',
+    image:'https://images.unsplash.com/photo-1619694108677-8a4dc3bd9875?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fG1pZ3JhaW5lJTIwdHJlYXRtZW50fGVufDB8fDB8fHww',
   },
   {
     id: 'hay-fever-treatments',
@@ -326,7 +328,7 @@ export const services: Service[] = [
     category: 'prescribing',
     description: 'Expert advice and treatment for hay fever and seasonal allergies.',
     fullDescription: 'Get relief from hay fever symptoms with expert advice and treatment. Our pharmacists can recommend the best treatment options for your hay fever.',
-    image: '/images/hayfever.jpg',
+    image: 'https://plus.unsplash.com/premium_photo-1661537390414-33d7ad495159?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aGF5JTIwZmV2ZXIlMjB0cmVhdG1lbnR8ZW58MHx8MHx8fDA%3D',
   },
   {
     id: 'weight-loss-medication',
@@ -355,7 +357,7 @@ export const services: Service[] = [
     category: 'medication',
     description: 'Convenient repeat prescription collection and delivery service.',
     fullDescription: 'Save time with our repeat prescription collection and delivery service. We can collect your prescriptions from your GP and deliver them to your door.',
-    image: '/images/medicine.jpg',
+    image: 'https://images.unsplash.com/photo-1576091358783-a212ec293ff3?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHJlc2NyaXB0aW9ufGVufDB8fDB8fHww',
   },
   {
     id: 'emergency-supply',
@@ -364,7 +366,7 @@ export const services: Service[] = [
     category: 'medication',
     description: 'Emergency supply of medicines when you run out of your regular medication.',
     fullDescription: 'If you run out of your regular medication, we may be able to provide an emergency supply. Our pharmacists can assess your situation and provide appropriate assistance.',
-    image: '/images/medicine-supply.jpg',
+    image: 'https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJlc2NyaXB0aW9ufGVufDB8fDB8fHww',
   },
   {
     id: 'morning-after-pill',
@@ -391,7 +393,7 @@ export const services: Service[] = [
     category: 'medication',
     description: 'Travel medication supply for your trip abroad.',
     fullDescription: 'Get all the medications you need for your trip. We can supply travel medications including antimalarials, altitude sickness medication, and more.',
-    image: '/images/travel.jpg',
+    image: 'https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D',
   },
 
   // 👶 Children & Family Services
@@ -402,7 +404,7 @@ export const services: Service[] = [
     category: 'children',
     description: 'Private childhood vaccinations for your children.',
     fullDescription: 'Access private childhood vaccinations for your children. We provide a range of childhood vaccines in a friendly and comfortable environment.',
-    image: '/images/childhood.jpg',
+    image: 'https://plus.unsplash.com/premium_photo-1691752881339-d78da354ee7e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2hpbGRyZW58ZW58MHx8MHx8fDA%3D',
   },
   {
     id: 'head-lice-treatment',
@@ -411,7 +413,7 @@ export const services: Service[] = [
     category: 'children',
     description: 'Expert advice and treatment for head lice.',
     fullDescription: 'Get expert advice and effective treatment for head lice. Our pharmacists can recommend the best treatment options and provide guidance on prevention.',
-    image: '/images/children.jpg',
+    image: 'https://images.unsplash.com/photo-1540479859555-17af45c78602?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpbGRyZW58ZW58MHx8MHx8fDA%3D',
   },
   {
     id: 'newborn-health-support',
@@ -420,7 +422,7 @@ export const services: Service[] = [
     category: 'children',
     description: 'Expert advice and support for colic, feeding, and newborn health concerns.',
     fullDescription: 'Get expert advice and support for colic, feeding issues, and newborn health concerns. Our pharmacists provide guidance to help new parents.',
-    image: '/images/newborn.jpg',
+    image: 'https://plus.unsplash.com/premium_photo-1664474430762-f5201ecb6c43?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bmV3Ym9ybnxlbnwwfHwwfHx8MA%3D%3D',
   },
   {
     id: 'child-ear-infection',
@@ -429,7 +431,7 @@ export const services: Service[] = [
     category: 'children',
     description: 'Assessment and treatment for children\'s ear infections and sore throats.',
     fullDescription: 'Expert assessment and treatment for children\'s ear infections and sore throats. Our pharmacist prescribers can provide appropriate care for your child.',
-    image: '/images/child-ear.jpg',
+    image: 'https://plus.unsplash.com/premium_photo-1723489239811-7abaa1301cb8?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2hpbGQlMjBlYXJ8ZW58MHx8MHx8fDA%3D',
   },
 
   // 🧪 Testing & Screening Services
@@ -440,7 +442,7 @@ export const services: Service[] = [
     category: 'testing',
     description: 'Confidential STD/STI testing for chlamydia, gonorrhoea, HIV, and syphilis.',
     fullDescription: 'Get confidential STD/STI testing including chlamydia, gonorrhoea, HIV, and syphilis. Our service is discreet and professional.',
-    image: '/images/glucose-testing.jpg',
+    image: 'https://plus.unsplash.com/premium_photo-1668487827156-7aa259d7ffa3?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGVzdGluZ3xlbnwwfHwwfHx8MA%3D%3D',
   },
   {
     id: 'hiv-testing',
@@ -449,7 +451,7 @@ export const services: Service[] = [
     category: 'testing',
     description: 'Private HIV testing available as rapid or lab-based tests.',
     fullDescription: 'Access private HIV testing with rapid or lab-based options. Our service is confidential and provides expert support and guidance.',
-    image: '/images/hepatitis.jpg',
+    image: 'https://images.unsplash.com/photo-1579165466991-467135ad3110?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHRlc3Rpbmd8ZW58MHx8MHx8fDA%3D',
   },
   {
     id: 'thyroid-function-test',
@@ -458,7 +460,7 @@ export const services: Service[] = [
     category: 'testing',
     description: 'Thyroid function testing to assess thyroid health.',
     fullDescription: 'Get your thyroid function tested to assess your thyroid health. Our testing service helps detect thyroid disorders early.',
-    image: '/images/cholesterol-testing.jpg',
+    image: 'https://plus.unsplash.com/premium_photo-1668487827156-7aa259d7ffa3?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGVzdGluZ3xlbnwwfHwwfHx8MA%3D%3D',
   },
   {
     id: 'vitamin-d-testing',
@@ -467,7 +469,7 @@ export const services: Service[] = [
     category: 'testing',
     description: 'Vitamin D level testing to assess your vitamin D status.',
     fullDescription: 'Get your vitamin D levels tested to assess your status. Low vitamin D can affect bone health and overall wellbeing.',
-    image: '/images/glucose-testing.jpg',
+    image: 'https://plus.unsplash.com/premium_photo-1676325102275-f5ec2de6c971?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHRlc3Rpbmd8ZW58MHx8MHx8fDA%3D',
   },
   {
     id: 'allergy-testing',
@@ -485,7 +487,7 @@ export const services: Service[] = [
     category: 'testing',
     description: 'Comprehensive hormone testing for testosterone, fertility, and menopause.',
     fullDescription: 'Get comprehensive hormone testing including testosterone, fertility hormones, and menopause-related hormones. Our testing helps assess hormonal health.',
-    image: '/images/cholesterol-testing.jpg',
+    image: 'https://images.unsplash.com/photo-1601961545517-59307b1fbac3?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHRlc3Rpbmd8ZW58MHx8MHx8fDA%3D',
   },
   {
     id: 'kidney-liver-function',
@@ -503,7 +505,7 @@ export const services: Service[] = [
     category: 'testing',
     description: 'Coeliac disease testing to diagnose gluten intolerance.',
     fullDescription: 'Get tested for coeliac disease to diagnose gluten intolerance. Our testing service helps identify if you have coeliac disease.',
-    image: '/images/cholesterol-testing.jpg',
+    image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRlc3Rpbmd8ZW58MHx8MHx8fDA%3D',
   },
   {
     id: 'covid-testing',
@@ -512,7 +514,7 @@ export const services: Service[] = [
     category: 'testing',
     description: 'Covid-19 PCR and antigen testing available.',
     fullDescription: 'Get Covid-19 PCR or antigen tests for travel, work, or peace of mind. Fast and accurate testing available.',
-    image: '/images/covid.jpg',
+    image: 'https://plus.unsplash.com/premium_photo-1661440247844-f28df59bcc5b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y292aWQlMjB0ZXN0aW5nfGVufDB8fDB8fHww',
   },
   {
     id: 'workplace-drug-testing',
@@ -521,7 +523,7 @@ export const services: Service[] = [
     category: 'testing',
     description: 'Workplace drug testing services available at some pharmacies.',
     fullDescription: 'Workplace drug testing services available. Contact us for more information about this service.',
-    image: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=400&h=300&fit=crop',
+    image: 'https://images.unsplash.com/photo-1615631898182-0f6550dd2fbd?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y292aWQlMjB0ZXN0aW5nfGVufDB8fDB8fHww',
   },
   // 🏥 Women's Health Services
   {
@@ -531,7 +533,7 @@ export const services: Service[] = [
     category: 'womens-health',
     description: 'Expert treatment for thrush and bacterial vaginosis (BV).',
     fullDescription: 'Get effective treatment for thrush and bacterial vaginosis (BV). Our pharmacists provide expert advice and appropriate treatment options.',
-    image: '/images/drug.jpg',
+    image: 'https://plus.unsplash.com/premium_photo-1668605109201-2dcf7a001215?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZHJ1Z3xlbnwwfHwwfHx8MA%3D%3D',
   },
   {
     id: 'menopause-consultations',
@@ -540,7 +542,7 @@ export const services: Service[] = [
     category: 'womens-health',
     description: 'Expert consultations and support for menopause symptoms.',
     fullDescription: 'Get expert consultations and support for menopause symptoms. Our pharmacists can provide advice on managing menopause and available treatments.',
-    image: '/images/private.jpg',
+    image: 'https://images.unsplash.com/photo-1739285388427-d6f85d12a8fc?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWVkaWNhbCUyMGNvbnN1bHRhdGlvbnxlbnwwfHwwfHx8MA%3D%3D',
   },
   {
     id: 'pregnancy-testing',
@@ -549,7 +551,7 @@ export const services: Service[] = [
     category: 'womens-health',
     description: 'Pregnancy testing available at our pharmacy.',
     fullDescription: 'Get accurate pregnancy testing at our pharmacy. Our trained staff provide confidential and professional service.',
-    image: '/images/pregnancy.jpg',
+    image: 'https://images.unsplash.com/flagged/photo-1572531186838-27a5459566f2?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHJlZ25hbmN5fGVufDB8fDB8fHww',
   },
 
   // 🍃 Lifestyle & Wellness Services
@@ -567,7 +569,7 @@ export const services: Service[] = [
       'Ongoing support and advice',
       'Proven success strategies',
     ],
-    image: '/images/smoking.jpg',
+    image: 'https://plus.unsplash.com/premium_photo-1667680761053-650123c814f7?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c21va2luZ3xlbnwwfHwwfHx8MA%3D%3D',
   },
   {
     id: 'weight-loss',
@@ -584,7 +586,7 @@ export const services: Service[] = [
       'Comprehensive support throughout the programme',
     ],
     bookingUrl: 'https://expertweightloss.co.uk/booking/injection/clinic/sidcup',
-    image: '/images/weight-loss.jpg',
+    image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGZpdG5lc3N8ZW58MHx8MHx8fDA%3D',
   },
   {
     id: 'alcohol-reduction',
@@ -593,7 +595,7 @@ export const services: Service[] = [
     category: 'lifestyle',
     description: 'Expert support and advice for reducing alcohol consumption.',
     fullDescription: 'Get expert support and advice for reducing alcohol consumption. Our pharmacists can provide guidance and resources to help you reduce your alcohol intake.',
-    image: '/images/alcohol.jpg',
+    image: 'https://images.unsplash.com/photo-1508253730651-e5ace80a7025?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWxjb2hvbHxlbnwwfHwwfHx8MA%3D%3D',
   },
   {
     id: 'healthy-lifestyle-coaching',
@@ -602,7 +604,7 @@ export const services: Service[] = [
     category: 'lifestyle',
     description: 'Personalized healthy lifestyle coaching and advice.',
     fullDescription: 'Get personalized healthy lifestyle coaching and advice. Our pharmacists can help you develop healthy habits and improve your overall wellbeing.',
-    image: '/images/healthy.jpg', 
+    image: 'https://images.unsplash.com/photo-1556911073-a517e752729c?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhbHRoeSUyMGxpZmVzdHlsZXxlbnwwfHwwfHx8MA%3D%3D', 
   },
   {
     id: 'vitamin-b12',
@@ -613,7 +615,7 @@ export const services: Service[] = [
     fullDescription: 'We offer a private vitamin B12 injection service in Canterbury at our clinic. Simply complete an online consultation and book an appointment online. Once your order is reviewed and approved by our doctors/prescribers, you will be able to attend the pharmacy to get the injection. This service must be ordered online.',
     price: '£29',
     bookingUrl: 'https://www.treatlocal.co.uk/online-booking/sidcup/vitamin-b12-injection-service/appointment',
-    image: '/images/injection.jpg',
+    image: 'https://plus.unsplash.com/premium_photo-1673953886109-a3249821993d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aW5qZWN0aW9ufGVufDB8fDB8fHww',
   },
   {
     id: 'earwax-removal',
@@ -622,7 +624,7 @@ export const services: Service[] = [
     category: 'lifestyle',
     description: 'Microsuction earwax removal service. Safe and professional.',
     fullDescription: 'We offer a private microsuction earwax removal service in Canterbury at OH Health + Pharmacy. Book your appointment online.',
-    image: '/images/ear-infection.jpg',
+    image: 'https://images.unsplash.com/photo-1741174844812-c59239e677be?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZWFyJTIwd2F4JTIwcmVtb3ZhbHxlbnwwfHwwfHx8MA%3D%3D',
   },
   {
     id: 'sports-injury-advice',
@@ -631,7 +633,7 @@ export const services: Service[] = [
     category: 'lifestyle',
     description: 'Expert advice and support for sports injuries.',
     fullDescription: 'Get expert advice and support for sports injuries. Our pharmacists can provide guidance on managing sports injuries and recommend appropriate treatments.',
-    image: '/images/sport.jpg',
+    image: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c3BvcnR8ZW58MHx8MHx8fDA%3D',
   },
 
   // 📑 Certificates & Workplace Services
@@ -642,7 +644,7 @@ export const services: Service[] = [
     category: 'certificates',
     description: 'Fit-to-fly medical certificates for air travel.',
     fullDescription: 'Get fit-to-fly medical certificates for air travel. Our service provides the necessary documentation for your travel needs.',
-    image: '/images/cert.jpg',
+    image: 'https://images.unsplash.com/photo-1570610159825-ec5d3823660c?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNlcnRpZmljYXRpb258ZW58MHx8MHx8fDA%3D',
   },
   {
     id: 'fit-to-work-medicals',
@@ -651,7 +653,7 @@ export const services: Service[] = [
     category: 'certificates',
     description: 'Fit-to-work medical examinations available at some pharmacies.',
     fullDescription: 'Fit-to-work medical examinations available. Contact us for more information about this service.',
-    image: '/images/medical-exam.jpg',
+    image: 'https://plus.unsplash.com/premium_photo-1681995460558-738a8856313c?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aGVhbHRoY2FyZSUyMGFuZCUyMG1lZGljaW5lfGVufDB8fDB8fHww',
   },
   {
     id: 'occupational-health-vaccinations',
@@ -660,7 +662,7 @@ export const services: Service[] = [
     category: 'certificates',
     description: 'Occupational health vaccinations for workplace requirements.',
     fullDescription: 'Get occupational health vaccinations for workplace requirements. We provide the necessary vaccinations and documentation for your job.',
-    image: '/images/hepatitis-b.jpg',
+    image: 'https://plus.unsplash.com/premium_photo-1661501762188-b1598949aecc?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8dmFjY2luYXRpb258ZW58MHx8MHx8fDA%3D',
   },
   {
     id: 'covid-recovery-certificates',
@@ -669,7 +671,7 @@ export const services: Service[] = [
     category: 'certificates',
     description: 'Covid recovery certificates for travel and other purposes.',
     fullDescription: 'Get Covid recovery certificates for travel and other purposes. Our service provides the necessary documentation.',
-    image: '/images/covid-cert.jpg',
+    image: 'https://images.unsplash.com/photo-1616101001234-7320af4f1aa7?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2VydGlmaWNhdGVzfGVufDB8fDB8fHww',
   },
   {
     id: 'private-sick-notes',
@@ -678,7 +680,7 @@ export const services: Service[] = [
     category: 'certificates',
     description: 'Private sick notes if provided by a prescriber.',
     fullDescription: 'Private sick notes available if provided by a prescriber. Contact us for more information.',
-    image: '/images/sick-notes.jpg',
+    image: 'https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVuJTIwYW5kJTIwcGFwZXJ8ZW58MHx8MHx8fDA%3D',
   },
 
   // 🔧 Additional Services
@@ -689,7 +691,7 @@ export const services: Service[] = [
     category: 'additional',
     description: 'Safe disposal service for needles and sharps.',
     fullDescription: 'Safely dispose of needles and sharps at our pharmacy. We provide proper disposal services to keep you and others safe.',
-    image: '/images/needle.jpg',
+    image: 'https://plus.unsplash.com/premium_photo-1668416938861-60bbde0598a5?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bmVlZGxlfGVufDB8fDB8fHww',
   },
   {
     id: 'mobility-aids',
@@ -698,7 +700,7 @@ export const services: Service[] = [
     category: 'additional',
     description: 'Mobility aids and medical equipment available for purchase.',
     fullDescription: 'Browse our range of mobility aids and medical equipment. We stock a variety of products to support your health and mobility needs.',
-    image: '/images/mobility.jpg',
+    image: 'https://plus.unsplash.com/premium_photo-1661292083810-d5caa95df532?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW9iaWxpdHklMjBhaWRzfGVufDB8fDB8fHww',
   },
   {
     id: 'eye-care',
@@ -707,7 +709,7 @@ export const services: Service[] = [
     category: 'additional',
     description: 'High-quality spectacles at affordable prices.',
     fullDescription: 'Rifaray Eye Care offers high-quality spectacles at affordable prices. Contact our team for details.',
-    image: '/images/eyecare.jpg',
+    image: 'https://images.unsplash.com/photo-1501621667575-af81f1f0bacc?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZXllJTIwY2FyZXxlbnwwfHwwfHx8MA%3D%3D',
   },
 ];
 
